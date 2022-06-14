@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_14_092303) do
+ActiveRecord::Schema.define(version: 2022_06_14_105518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sessions", force: :cascade do |t|
+    t.integer "wave_height"
+    t.integer "wind"
+    t.string "flag"
+    t.integer "period"
+    t.string "wind_direction"
+    t.string "wave_direction"
+    t.integer "min_score"
+    t.datetime "date_time_start"
+    t.datetime "date_time_end"
+    t.string "tips"
+    t.string "photo"
+    t.bigint "spot_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["spot_id"], name: "index_sessions_on_spot_id"
+  end
 
   create_table "spots", force: :cascade do |t|
     t.string "name"
@@ -38,4 +56,5 @@ ActiveRecord::Schema.define(version: 2022_06_14_092303) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "sessions", "spots"
 end
