@@ -47,34 +47,3 @@
   }
 }
 
-
-#pending {
-  margin-left: -30px;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: $yellow;
-  color: $black !important;
-  padding: 5px;
-  border-radius: 50%;
-  line-height: 1;
-  height: 20px;
-  width: 20px;
-}
-#reserv {
-  height: 20px;
-  width: 20px;
-  margin-left: 12px;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: $pink;
-  padding: 5px;
-  border-radius: 50%;
-  line-height: 1;
-  color: white !important;
-}
