@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2022_06_14_105518) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["spot_id"], name: "index_sessions_on_spot_id"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
