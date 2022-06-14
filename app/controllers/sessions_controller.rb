@@ -10,33 +10,34 @@ class SessionsController < ApplicationController
     if session.save
       redirect_to session_path(@session)
 
+      def index
+        @sessions = Session.all
+      end
 
-  def index
-    @sessions = Session.all
-  end
+      def show
+        @session = Session.find(params[:id])
+      end
 
-  def show
-    @session = Session.find(params[:id])
-  end
+      def edit
+      end
 
-  def edit
-  end
+      def update
+        @session.update(session_params)
+      end
 
-  def update
-    @session.update(session_params)
-  end
+      def destroy
+        @session.destroy
+      end
 
-  def destroy
-    @session.destroy
-  end
+      private
 
-  private
+      def set_session
+        @session = Session.find(params[:id])
+      end
 
-  def set_session
-    @session = Session.find(params[:id])
-  end
-
-  def session_params
-    params.require(:session).permit(:wave_height, :wind, :period, :wind_direction, :wave_direction, :min_score, :date_time_start, :date_time_end, :tips, :photo, :spot )
+      def session_params
+        params.require(:session).permit(:wave_height, :wind, :period, :wind_direction, :wave_direction, :min_score, :date_time_start, :date_time_end, :tips, :photo, :spot)
+      end
+    end
   end
 end
