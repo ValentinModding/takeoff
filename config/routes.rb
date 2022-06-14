@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :spots, only: [:show]
+
   resources :sessions do
     resources :participations, except: [:index]
   end
