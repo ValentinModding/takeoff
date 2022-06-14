@@ -1,4 +1,5 @@
 class ParticipationsController < ApplicationController
+
   before_action :set_parcicipation, only: [:destroy]
   def new
     @participation = Participation.new
@@ -16,6 +17,7 @@ class ParticipationsController < ApplicationController
   # def index
   #   @parcicipations = Participation.all
   # end
+  
   def edit
   end
 
