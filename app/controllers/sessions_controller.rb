@@ -1,7 +1,15 @@
 class SessionsController < ApplicationController
+  before_action :set_session, only: [:show, :edit, :update, :destroy]
+
   def new
     @session = Session.new
   end
+
+  def create
+    @session = Session.new(session_params)
+    if session.save
+      redirect_to session_path(@session)
+
 
   def index
     @sessions = Session.all
@@ -12,6 +20,9 @@ class SessionsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
     @session.update(session_params)
   end
 
