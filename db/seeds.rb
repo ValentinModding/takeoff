@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # suppression des spots user & contact
-User.destroy_all
 Contact.destroy_all
+User.destroy_all
 Spot.destroy_all
 # création des spots
 puts "Création des spots..."
