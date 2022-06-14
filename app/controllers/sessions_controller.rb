@@ -9,7 +9,10 @@ class SessionsController < ApplicationController
     @session = Session.new(session_params)
     if session.save
       redirect_to session_path(@session)
-
+    else
+      :new
+    end
+  end
 
   def index
     @sessions = Session.all
