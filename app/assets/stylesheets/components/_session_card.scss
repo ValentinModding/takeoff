@@ -1,0 +1,25 @@
+.session-card {
+  width: 360px;
+  height: 250px;
+  margin-top: 12px;
+  .session-image {
+    width: 360px;
+    height: 200px;
+    background-image: url("https://i.imgur.com/RHKZivg.jpg");
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+  }
+  .session-bottom {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0A376E;
+  }
+}
