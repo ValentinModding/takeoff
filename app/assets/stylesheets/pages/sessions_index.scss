@@ -6,6 +6,50 @@
   flex-direction: column;
 }
 
+.search-bar {
+  height: 50px;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  opacity: 60%;
+  box-shadow: 1px 6px 16px 0px black;
+  border: 2px white solid inset;
+  border-radius: 50px 50px 50px 50px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  .search-icon {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconify {
+    width: 60px;
+    font-size: 24px;
+    justify-content: center;
+    color: $pink;
+  }
+
+  .search-placeholder {
+    margin-top: px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $pink;
+    h2 {
+    font-size: 18px;
+    font-weight: bold;
+    }
+    p {
+      font-size: 12px;
+      }
+  }
+  }
+
 .map {
   background-image: url("https://images.unsplash.com/photo-1509818139432-c67e4197a914?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80");
   background-position: center;
@@ -15,6 +59,18 @@
   width: 100%;
   z-index: 0;
 }
+
+.main-title-session {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  .highlight{
+    background-color: $pink;
+    border-radius: 8px;
+    padding: 2px 5px;
+  }
+}
+
 
 .cards-container {
   position: fixed;
@@ -27,7 +83,7 @@
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   text-align: center;
   padding: 0 20px 20px 20px;
 }
@@ -46,4 +102,9 @@
   bottom: 0;
   right: 0;
   left: 0;
+}
+.scroll-container {
+  margin-top: 25px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }

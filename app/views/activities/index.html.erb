@@ -1,21 +1,32 @@
 <div class="sessions-index">
   <div class="map">
+  <div class="search-bar">
+      <div class="search-icon">
+        <span class="iconify" data-icon="bi:search">search</span>
+      </div>
+    <div class="search-placeholder">
+      <h2> City </h2>
+      <p> City or spot name </p>
+    </div>
   </div>
+
+  <div class="main-title-session">
+    <h2> Aloha, <span class="highlight"><%= @user.email %> ! </span></h2>
+    <p> We found the best for you this week ! </p>
+  </div>
+
   <div class="cards-container">
-<%#     <div class="card-sessions-container"> %>
-    <div class="card-session-top">
-      <div class="card-session-overlay">
+    <div class="scroll-container">
+      <div class="card-sessions-container">
+        </div>
+          <%= render 'shared/session_card' %>
+          <%= render 'shared/session_card' %>
+          <%= render 'shared/session_card' %>
+          <%= render 'shared/session_card' %>
+          <%= render 'shared/session_card' %>
+          <%= render 'shared/session_card' %>
     </div>
-    </div>
-      <%= render 'shared/session_card' %>
-      <%= render 'shared/session_card' %>
-      <%= render 'shared/session_card' %>
-      <%= render 'shared/session_card' %>
-      <%= render 'shared/session_card' %>
-      <%= render 'shared/session_card' %>
-      <%= render 'shared/session_card' %>
-      <%= render 'shared/session_card' %>
-      <%= render 'shared/session_card' %>
-    </div>
+  </div>
   </div>
 </div>
+<%= render 'shared/navbar' %>
