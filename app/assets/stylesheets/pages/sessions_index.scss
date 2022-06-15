@@ -29,5 +29,21 @@
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.card-session-overlay {
+  position: sticky;
+  top: 0;
+  height: 30px;
+  width: 100%;
+  background-color: white;
+}
+
+.card-session-top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
