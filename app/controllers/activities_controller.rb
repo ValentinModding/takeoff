@@ -3,6 +3,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new
+    @spots = Spot.all
   end
 
   def create
