@@ -8,7 +8,7 @@ class ParticipationsController < ApplicationController
   def create
     @participation = Participation.new(participation_params)
     if @parcicipation.save
-      redirect_to session_path(@participation)
+      redirect_to activity_path(@participation)
     else
       :new
     end
@@ -36,6 +36,6 @@ class ParticipationsController < ApplicationController
   end
 
   def participation_params
-    params.require(:parcicipation).permit(:start, :end, :user_id, :session_id, :contact_id)
+    params.require(:parcicipation).permit(:start, :end, :user_id, :activity_id, :contact_id)
   end
 end
