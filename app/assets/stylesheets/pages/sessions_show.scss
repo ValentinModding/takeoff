@@ -44,16 +44,20 @@
   margin-left: 30px;
 }
 
-.avatar-buddies {
+.session-content {
+}
+
+.buddies {
   display: flex;
-  justify-content: center;
-  
+  justify-content: flex-start;
 }
 
 .btn-join-back {
   display: flex;
   justify-content: space-between;
-  margin: -7px 9px 0px 9px;
+  margin: 55px 10px 0px 10px;
+  align-items: flex-end;
+  align-content: flex-end;
 }
 
 .iconify {
