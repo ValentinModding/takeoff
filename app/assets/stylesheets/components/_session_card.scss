@@ -2,15 +2,18 @@
   width: 360px;
   height: 250px;
   margin-top: 12px;
+
   .session-image {
     width: 360px;
     height: 200px;
-    background-image: url("https://i.imgur.com/RHKZivg.jpg");
+    background-image: url("https://i.imgur.com/CFf50UC.jpg");
     background-position: initial;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 12px;
+    box-shadow: -500px 20px 0px #0000006e inset;
   }
+}
   .session-bottom {
     margin-top: 10px;
     display: flex;
@@ -22,4 +25,3 @@
     line-height: 20px;
     color: #0A376E;
   }
-}
