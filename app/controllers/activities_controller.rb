@@ -36,7 +36,7 @@ class ActivitiesController < ApplicationController
   private
 
   def set_activity
-    @activity = activity.find(params[:id])
+    @activity = Activity.find(params[:id])
   end
 
   def activity_params
