@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :spots, only: [:show]
 
-  resources :sessions do
+  resources :activities do
     resources :participations, except: [:index]
   end
   get '/dashboard', to: 'pages#dashboard'
