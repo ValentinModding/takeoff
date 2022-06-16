@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f380512d-bba5-439f-9902-2755c39de7d4" name="Changes" comment="fix url simple form" />
+    <list default="true" id="f380512d-bba5-439f-9902-2755c39de7d4" name="Changes" comment="fix url simple form">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/dashboard.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/dashboard.html.erb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,6 +155,8 @@
       <workItem from="1655303953681" duration="4000" />
       <workItem from="1655305648377" duration="594000" />
       <workItem from="1655368626346" duration="3684000" />
+      <workItem from="1655377288439" duration="1236000" />
+      <workItem from="1655382452431" duration="359000" />
     </task>
     <task id="LOCAL-00001" summary="fix url simple form">
       <created>1655296112450</created>

@@ -1,4 +1,5 @@
 <h1>Aloha <%= @user.name %></h1>
 <h3>Mes sessions à venir:</h3>
-<%= render 'shared/session_card' %>
-<%= @my_future_participations %>
+<% @my_future_participations.each do |participation| %>
+  <% render 'shared/session_card', session: participation %>
+<% end %>
