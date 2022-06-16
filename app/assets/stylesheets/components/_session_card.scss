@@ -48,9 +48,6 @@
       .session-favorites {
         color: $pink;
       }
-      .session-flag {
-        color: #4CED52;
-      }
   }
 }
   .session-bottom {
@@ -63,4 +60,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #0A376E;
+    .pink {
+      color: $pink;
+    }
   }
