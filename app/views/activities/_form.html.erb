@@ -1,0 +1,17 @@
+<%= simple_form_for @activity do |f| %>
+  <%= f.input :wave_height, as: :float, placeholder: "Enter the height of the waves" %>
+  <%= f.input :wind, as: :integer, placeholder: "Enter the wind" %>
+  <%= f.input :flag, placeholder: "Enter the flag" %>
+  <%= f.input :period, as: :float, placeholder: "Enter the period" %>
+  <%= f.input :wind_direction, placeholder: "Enter the wind direction", :collection => %w[N NE E SE S SW W NW] %>
+  <%= f.input :wave_direction, placeholder: 'Enter the wave direction', :collection => %w[N NE E SE S SW W NW] %>
+  <%= f.input :min_score, as: :numeric, placeholder: 'Enter the min score' %>
+  <%= f.input :date_time_start %>
+  <%= f.input :date_time_end %>
+  <%= f.input :photo, label: "Choose your photo" %>
+  <%= f.input :tips, as: :text, placeholder: "Enter tips" %>
+
+  <%= f.input :spot_id, placeholder: "Enter spot", :collection => @spots %>
+
+  <%= f.submit "Create" %>
+<% end %>
