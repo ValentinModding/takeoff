@@ -33,7 +33,6 @@
       </div>
       <div class="session-flag">
         <% flag_color = session.flag.downcase %>
-
         <% if flag_color == "green" %>
           <span class="iconify" data-icon="ooui:flag-rtl" style="color:#4CED52">flag</span>
         <% elsif flag_color == "yellow" %>
@@ -43,15 +42,15 @@
         <% end %>
       </div>
     </div>
-
   </div>
-
-  <div class="session-bottom"></div>
-    <p> <%= session.flag %></p>
+  <div class="session-bottom">
+    <% months = ["Janvier", "Février", "Mars", "Avril", "Mai" , "Juin", "Juillet" , "Aout" , "Septembre", "Octobre", "Novembre", "Décembre"] %>
+    <p> <%= session.date_time_start.day %> &nbsp;</p>
+    <p> <%= months[session.date_time_start.month - 1] %> &nbsp;</p>
+    <span class="pink"> ● &nbsp;</span>
+    <p> <%=  %> <%= session.spot.name %> &nbsp;</p>
+    <span class="pink"> ● &nbsp;</span>
+    <p>14km</p>
+  </div>
   </div>
 </div>
-
-
-#4CED52
-Green Yellow red
-GREEN YELLOW rend
