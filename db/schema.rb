@@ -49,13 +49,13 @@ ActiveRecord::Schema.define(version: 2022_06_16_090103) do
   create_table "participations", force: :cascade do |t|
     t.datetime "start"
     t.datetime "end"
-    t.bigint "session_id", null: false
+    t.bigint "activity_id", null: false
     t.bigint "user_id", null: false
     t.bigint "contact_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["activity_id"], name: "index_participations_on_activity_id"
     t.index ["contact_id"], name: "index_participations_on_contact_id"
-    t.index ["session_id"], name: "index_participations_on_session_id"
     t.index ["user_id"], name: "index_participations_on_user_id"
   end
 
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_090103) do
 
   add_foreign_key "activities", "spots"
   add_foreign_key "contacts", "users"
-  add_foreign_key "participations", "activities", column: "session_id"
+  add_foreign_key "participations", "activities"
   add_foreign_key "participations", "contacts"
   add_foreign_key "participations", "users"
 end

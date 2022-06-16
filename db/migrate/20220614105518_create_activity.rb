@@ -1,6 +1,6 @@
-class CreateSessions < ActiveRecord::Migration[6.1]
+class CreateActivity < ActiveRecord::Migration[6.1]
   def change
-    create_table :sessions do |t|
+    create_table :activities do |t|
       t.integer :wave_height
       t.integer :wind
       t.string :flag
