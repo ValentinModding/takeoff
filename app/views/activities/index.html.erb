@@ -15,16 +15,16 @@
     <p> We found the best for you this week ! </p>
   </div>
 
+  </div>
   <div class="cards-container">
     <div class="swipe-up"></div>
     <div class="scroll-container">
       <div class="card-sessions-container">
-        <% @activities.each do |session| %>
-          <%= render 'shared/session_card', session: session %>
-        <% end %>
+          <% @activities.each do |session| %>
+            <%= render 'shared/session_card', session: session %>
+          <% end %>
       </div>
     </div>
-  </div>
   </div>
 </div>
 <%= render 'shared/navbar' %>
