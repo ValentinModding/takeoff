@@ -1,11 +1,10 @@
 .show-session {
-  background-color: white;
+  background-image: url(https://images.unsplash.com/photo-1520443240718-fce21901db79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-size: contain;
+  background-position: top;
 }
 
 .banner {
-  background-image: url("https://images.unsplash.com/photo-1520443240718-fce21901db79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-  background-size: cover;
-  background-position: center;
   padding: 150px 0;
   background-position: inherit;
 }
@@ -39,9 +38,9 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  border-radius: 4px;
+  border-radius: 38px 38px 0px 0px;
   padding: 15px;
-  margin-left: 30px;
+  justify-content: space-between;
 }
 
 .session-content {
@@ -55,7 +54,7 @@
 .btn-join-back {
   display: flex;
   justify-content: space-between;
-  margin: 55px 10px 0px 10px;
+  margin: 34px 10px 4px 12px;
   align-items: flex-end;
   align-content: flex-end;
 }
@@ -117,7 +116,7 @@ p {
 .btn-big {
   display: flex;
   font-family: 'Montserrat';
-  color: white;
+  color:#0A376E;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -160,11 +159,11 @@ p {
   font-family: 'Montserrat';
   height: 35px;
   width: 109px;
-  color: #0A376E;
+  color: white;
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
-  background-color: #D9D9D9;
+  background-color: #FF6363;
   padding: 9px, 37px, 9px, 37px;
   border-radius: 8px;
   text-decoration: none;
