@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 2022_06_16_144450) do
     t.datetime "date_time_start"
     t.datetime "date_time_end"
     t.string "tips"
-    t.string "photo"
     t.bigint "spot_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -93,7 +92,6 @@ ActiveRecord::Schema.define(version: 2022_06_16_144450) do
     t.float "longitude"
     t.string "address"
     t.string "description"
-    t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -109,7 +107,6 @@ ActiveRecord::Schema.define(version: 2022_06_16_144450) do
     t.string "name"
     t.boolean "admin"
     t.integer "score"
-    t.string "photo"
     t.string "address"
     t.integer "age"
     t.index ["email"], name: "index_users_on_email", unique: true
