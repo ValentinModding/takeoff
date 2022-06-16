@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_090103) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["contact_id"], name: "index_participations_on_contact_id"
-    t.index ["activity_id"], name: "index_participations_on_activity_id"
+    t.index ["session_id"], name: "index_participations_on_session_id"
     t.index ["user_id"], name: "index_participations_on_user_id"
   end
 
