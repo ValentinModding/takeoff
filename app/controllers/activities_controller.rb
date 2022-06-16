@@ -16,7 +16,7 @@ class ActivitiesController < ApplicationController
   end
 
   def index
-    @activitys = Activity.all
+    @activities = Activity.all
     @user = current_user
   end
 
