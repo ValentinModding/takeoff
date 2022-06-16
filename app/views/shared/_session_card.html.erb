@@ -4,23 +4,26 @@
     <div class="session-left">
       <div class="categorie-session">
         <span class="iconify" data-icon="arcticons:weather">soleil</span>
-        <h6>22°</h6>
+        <h6><%= session.temp %>°</h6>
       </div>
 
       <div class="categorie-session">
         <span class="iconify" data-icon="carbon:temperature-water">eau</span>
-        <h6>16°</h6>
+        <h6><%= session.water_temp %>°</h6>
       </div>
 
       <div class="categorie-session">
-        <span class="iconify" data-icon="map:surfing">surfers</span>
+        <span class="iconify" data-icon="map:surfing">surfer</span>
         <h6>+2</h6>
       </div>
 
       <div class="categorie-session">
-        <span class="iconify" data-icon="emojione-v1:water-wave"></span>
-        <span class="iconify" data-icon="emojione-v1:water-wave"></span>
+        <% waves_number = session.wave_height * 2 %>
+        <% waves_number.times do %>
+          <span class="iconify" data-icon="emojione-v1:water-wave">wave</span>
+        <% end %>
       </div>
+
     </div>
 
 
@@ -29,13 +32,25 @@
         <span class="iconify" data-icon="bi:heart">heart</span>
       </div>
       <div class="session-flag">
-        <span class="iconify" data-icon="ooui:flag-rtl">flag</span>
+        <% flag_color = session.flag.downcase %>
+        <% if flag_color == "green" %>
+          <span class="iconify" data-icon="ooui:flag-rtl" style="color:#4CED52">flag</span>
+        <% elsif flag_color == "yellow" %>
+          <span class="iconify" data-icon="ooui:flag-rtl" style="color:#ffea00">flag</span>
+        <% else  %>
+          <span class="iconify" data-icon="ooui:flag-rtl" style="color:red">flag</span>
+        <% end %>
       </div>
     </div>
-
   </div>
-
   <div class="session-bottom">
-    <p> 16 juin • La Cote des Basques • 3 km</p>
+    <% months = ["Janvier", "Février", "Mars", "Avril", "Mai" , "Juin", "Juillet" , "Aout" , "Septembre", "Octobre", "Novembre", "Décembre"] %>
+    <p> <%= session.date_time_start.day %> &nbsp;</p>
+    <p> <%= months[session.date_time_start.month - 1] %> &nbsp;</p>
+    <span class="pink"> ● &nbsp;</span>
+    <p> <%=  %> <%= session.spot.name %> &nbsp;</p>
+    <span class="pink"> ● &nbsp;</span>
+    <p>14km</p>
+  </div>
   </div>
 </div>
