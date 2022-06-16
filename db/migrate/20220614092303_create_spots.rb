@@ -6,8 +6,6 @@ class CreateSpots < ActiveRecord::Migration[6.1]
       t.float :longitude
       t.string :address
       t.string :description
-      t.string :photo
-
       t.timestamps
     end
   end
