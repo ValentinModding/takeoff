@@ -32,8 +32,15 @@
         <span class="iconify" data-icon="bi:heart">heart</span>
       </div>
       <div class="session-flag">
-        <%= session.flag %>
-        <span class="iconify" data-icon="ooui:flag-rtl" style="">flag</span>
+        <% flag_color = session.flag.downcase %>
+
+        <% if flag_color == "green" %>
+          <span class="iconify" data-icon="ooui:flag-rtl" style="color:#4CED52">flag</span>
+        <% elsif flag_color == "yellow" %>
+          <span class="iconify" data-icon="ooui:flag-rtl" style="color:#ffea00">flag</span>
+        <% else  %>
+          <span class="iconify" data-icon="ooui:flag-rtl" style="color:red">flag</span>
+        <% end %>
       </div>
     </div>
 
@@ -46,3 +53,5 @@
 
 
 #4CED52
+Green Yellow red
+GREEN YELLOW rend
