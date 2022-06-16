@@ -18,11 +18,10 @@
 
 .btn-spot {
   display: flex;
-  font-family: 'Montserrat';
   color: white;
+  font-family: 'Montserrat';
   text-align: center;
   align-items: center;
-  justify-content: center;
   height: 50px;
   width: 215px;
   font-style: normal;
@@ -41,27 +40,40 @@
   border-radius: 38px 38px 0px 0px;
   padding: 15px;
   justify-content: space-between;
+  height: 485px;
 }
 
 .session-content {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  row-gap: 15px;
+  margin: 24px 28px -5px 24px;
 }
 
 .buddies {
-  display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: 24px 28px -5px 24px;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
 }
 
 .btn-join-back {
   display: flex;
   justify-content: space-between;
-  margin: 34px 10px 4px 12px;
+  margin: 18px 5px 6px 2px;
   align-items: flex-end;
   align-content: flex-end;
 }
 
 .iconify {
   color: #0a376e;
-  height: 49px;
+  height: 36px;
   width: 41px;
 }
 
@@ -107,10 +119,12 @@ h3 {
 p {
   color:#0A376E;
   font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 300;
   letter-spacing: 0em;
   text-align: center;
+  margin-block-start: auto;
+  margin-block-end: auto;
 }
 
 .btn-big {
@@ -119,7 +133,6 @@ p {
   color:#0A376E;
   text-align: center;
   align-items: center;
-  justify-content: center;
   height: 50px;
   width: 215px;
   font-style: normal;
