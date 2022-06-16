@@ -1,32 +1,25 @@
 <div class="session-card">
-  <div class="session-image">
-
+  <div class="session-image" style="background-image: url(<%= session.spot.photo.attached? ? cl_image_path(session.spot.photo.key) : asset_path("CDB.jpeg") %>)">
     <div class="session-left">
       <div class="categorie-session">
         <span class="iconify" data-icon="arcticons:weather">soleil</span>
         <h6><%= session.temp %>°</h6>
       </div>
-
       <div class="categorie-session">
         <span class="iconify" data-icon="carbon:temperature-water">eau</span>
         <h6><%= session.water_temp %>°</h6>
       </div>
-
       <div class="categorie-session">
         <span class="iconify" data-icon="map:surfing">surfer</span>
         <h6>+2</h6>
       </div>
-
       <div class="categorie-session">
         <% waves_number = session.wave_height * 2 %>
         <% waves_number.times do %>
           <span class="iconify" data-icon="emojione-v1:water-wave">wave</span>
         <% end %>
       </div>
-
     </div>
-
-
     <div class="session-right">
       <div class="session-favorites">
         <span class="iconify" data-icon="bi:heart">heart</span>
@@ -51,6 +44,5 @@
     <p> <%=  %> <%= session.spot.name %> &nbsp;</p>
     <span class="pink"> ● &nbsp;</span>
     <p>14km</p>
-  </div>
   </div>
 </div>
