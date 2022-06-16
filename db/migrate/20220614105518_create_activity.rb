@@ -11,9 +11,7 @@ class CreateActivity < ActiveRecord::Migration[6.1]
       t.datetime :date_time_start
       t.datetime :date_time_end
       t.string :tips
-      t.string :photo
       t.references :spot, null: false, foreign_key: true
-
       t.timestamps
     end
   end
