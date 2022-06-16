@@ -125,7 +125,9 @@ contact1 = Contact.create!(
   user: user1
 )
 puts "contacts crées avec succes"
+
 puts "Création des sessions ..."
+
 session1 = Activity.create!(
   id: 3,
   wave_height: 2,
@@ -219,6 +221,7 @@ session5 = Activity.create!(
 
 puts "sessions créees avec succes"
 
+
 puts "Ajout des images aux spots ..."
 
 spot1.photo.attach(io: est, filename: 'EST.jpeg', content_type: 'image/jpeg')
@@ -235,3 +238,4 @@ spot10.photo.attach(io: hendaye, filename: 'hendaye.jpeg', content_type: 'image/
 puts "Images de spots bien importées"
 
 puts "SEEDS OK"
+
