@@ -1,6 +1,6 @@
-class CreateSessions < ActiveRecord::Migration[6.1]
+class CreateActivity < ActiveRecord::Migration[6.1]
   def change
-    create_table :sessions do |t|
+    create_table :activities do |t|
       t.integer :wave_height
       t.integer :wind
       t.string :flag
@@ -11,9 +11,7 @@ class CreateSessions < ActiveRecord::Migration[6.1]
       t.datetime :date_time_start
       t.datetime :date_time_end
       t.string :tips
-      t.string :photo
       t.references :spot, null: false, foreign_key: true
-
       t.timestamps
     end
   end

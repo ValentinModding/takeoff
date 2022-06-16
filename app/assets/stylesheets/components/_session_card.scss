@@ -2,15 +2,54 @@
   width: 360px;
   height: 250px;
   margin-top: 12px;
+
   .session-image {
     width: 360px;
     height: 200px;
-    background-image: url("https://i.imgur.com/RHKZivg.jpg");
+    background-image: url("https://i.imgur.com/CFf50UC.jpg");
     background-position: initial;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 12px;
+    box-shadow: -500px 20px 0px #0000006e inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .session-left {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 10px;
+      font-size: 28px;
+      color: white;
+      .categorie-session {
+        display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+      }
+    }
+
+    .session-right {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 28px;
+      padding: 10px;
+    }
+
+      .session-favorites {
+        color: white;
+      }
   }
+}
   .session-bottom {
     margin-top: 10px;
     display: flex;
@@ -21,5 +60,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #0A376E;
+    .pink {
+      color: $pink;
+    }
   }
-}

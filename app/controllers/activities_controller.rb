@@ -3,6 +3,8 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new
+    @spots = Spot.all
+    @flags = ["Green", "Yellow", "red"]
   end
 
   def create
@@ -15,11 +17,12 @@ class ActivitiesController < ApplicationController
   end
 
   def index
-    @activitys = Activity.all
+    @activities = Activity.all
+    @user = current_user
+    # @participations = Participation.where(:session_id)
   end
 
   def show
-    @activity = Activity.find(params[:id])
   end
 
   def edit
