@@ -4,23 +4,26 @@
     <div class="session-left">
       <div class="categorie-session">
         <span class="iconify" data-icon="arcticons:weather">soleil</span>
-        <h6>22°</h6>
+        <h6><%= session.temp %>°</h6>
       </div>
 
       <div class="categorie-session">
         <span class="iconify" data-icon="carbon:temperature-water">eau</span>
-        <h6>16°</h6>
+        <h6><%= session.water_temp %>°</h6>
       </div>
 
       <div class="categorie-session">
-        <span class="iconify" data-icon="map:surfing">surfers</span>
+        <span class="iconify" data-icon="map:surfing">surfer</span>
         <h6>+2</h6>
       </div>
 
       <div class="categorie-session">
-        <span class="iconify" data-icon="emojione-v1:water-wave"></span>
-        <span class="iconify" data-icon="emojione-v1:water-wave"></span>
+        <% waves_number = session.wave_height * 2 %>
+        <% waves_number.times do %>
+          <span class="iconify" data-icon="emojione-v1:water-wave">wave</span>
+        <% end %>
       </div>
+
     </div>
 
 
@@ -36,6 +39,6 @@
   </div>
 
   <div class="session-bottom">
-    <p> 16 juin • La Cote des Basques • 3 km</p>
+    <p> <%= session.flag %></p>
   </div>
 </div>
