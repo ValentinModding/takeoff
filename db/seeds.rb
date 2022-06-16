@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # suppression des spots user & contact
+Activity.destroy_all
 Contact.destroy_all
 User.destroy_all
 Spot.destroy_all
