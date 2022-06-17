@@ -39,7 +39,7 @@ spot1 = Spot.create!(
 
 spot2 = Spot.create!(
   name: "Les Culs Nus",
-  address: "Boulevard du Front de Mer, Soorts-Hossegor, France",
+  address: "62 Av. des Tamaris, 40150 Soorts-Hossegor",
   description: "description spot 2"
 )
 
@@ -56,14 +56,14 @@ spot4 = Spot.create!(
 )
 
 spot5 = Spot.create!(
-  name: "Plage de la Petite Chambre d'Amour",
+  name: "Plage de la Chambre d'Amour",
   address: "5 Place des Docteurs Gentilhe, 64600 Anglet, France",
   description: "description spot 5"
 )
 
 spot6 = Spot.create!(
   name: "La Grande Plage",
-  address: "Grande Plage, 1 Boulevard du Général de Gaulle, 64200 Biarritz, France",
+  address: "1 Boulevard du Général de Gaulle, 64200 Biarritz, France",
   description: "description spot 6"
 )
 
@@ -140,10 +140,10 @@ session1 = Activity.create!(
   date_time_start: "Sat, 18 Jun 2022 08:28:00.000000000 UTC +00:00",
   date_time_end: "Sat, 18 Jun 2022 14:28:00.000000000 UTC +00:00",
   tips: "L'idéal pour ce spot est de surfer à marrée haute en raison de ses rochers et de la puissance des vagues.",
-  spot_id: 6,
   name: "17 Juin - La Grande Plage",
   temp: 35,
-  water_temp: 22
+  water_temp: 22,
+  spot: spot6
 )
 
 
@@ -159,10 +159,10 @@ session2 = Activity.create!(
   date_time_start: "Sun, 19 Jun 2022 09:27:00.000000000 UTC +00:00",
   date_time_end: "Sun, 19 Jun 2022 15:22:00.000000000 UTC +00:00",
   tips: "Attention aux forts courants (bahines) qui peuvent vous entraîner au large ou vous décaler du spot très rapidement.",
-  spot_id: 2,
   name: "19 Juin - Les Culs Nuls",
   temp: 24,
-  water_temp: 19
+  water_temp: 19,
+  spot: spot2
 )
 
 session3 = Activity.create!(
@@ -178,9 +178,10 @@ session3 = Activity.create!(
   date_time_end: "Sat, 18 Jun 2022 14:28:00.000000000 UTC +00:00",
   tips: "Les vagues à Anglet sont plus puissantes qu'à Biarritz, mais ce spot est tout à fait praticable pour des niveaux débutants à intermédiaires.",
   spot_id: 5,
-  name: "18 Juin - Plage de la Petite Chambre d'Amour",
+  name: "18 Juin - Plage de la Chambre d'Amour",
   temp: 37,
-  water_temp: 22
+  water_temp: 22,
+  spot: spot5
 )
 
 session4 = Activity.create!(
@@ -198,7 +199,8 @@ session4 = Activity.create!(
   spot_id: 10,
   name: "19 Juin - Plage d'Hendaye",
   temp: 36,
-  water_temp: 24
+  water_temp: 24,
+  spot: spot10
 )
 
 session5 = Activity.create!(
@@ -216,7 +218,8 @@ session5 = Activity.create!(
   spot_id: 7,
   name: "17 Juin - La Cote des Basques",
   temp: 28,
-  water_temp: 21
+  water_temp: 21,
+  spot: spot7
 )
 
 puts "sessions créees avec succes"

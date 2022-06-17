@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_16_144450) do
+ActiveRecord::Schema.define(version: 2022_06_17_084246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,12 +54,15 @@ ActiveRecord::Schema.define(version: 2022_06_16_144450) do
     t.datetime "date_time_start"
     t.datetime "date_time_end"
     t.string "tips"
+    t.string "photo"
     t.bigint "spot_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.integer "temp"
     t.integer "water_temp"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["spot_id"], name: "index_activities_on_spot_id"
   end
 
@@ -76,13 +79,13 @@ ActiveRecord::Schema.define(version: 2022_06_16_144450) do
   create_table "participations", force: :cascade do |t|
     t.datetime "start"
     t.datetime "end"
-    t.bigint "activity_id", null: false
+    t.bigint "session_id", null: false
     t.bigint "user_id", null: false
     t.bigint "contact_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["activity_id"], name: "index_participations_on_activity_id"
     t.index ["contact_id"], name: "index_participations_on_contact_id"
+    t.index ["session_id"], name: "index_participations_on_session_id"
     t.index ["user_id"], name: "index_participations_on_user_id"
   end
 
@@ -92,6 +95,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_144450) do
     t.float "longitude"
     t.string "address"
     t.string "description"
+    t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -107,6 +111,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_144450) do
     t.string "name"
     t.boolean "admin"
     t.integer "score"
+    t.string "photo"
     t.string "address"
     t.integer "age"
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -117,7 +122,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_144450) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "activities", "spots"
   add_foreign_key "contacts", "users"
-  add_foreign_key "participations", "activities"
+  add_foreign_key "participations", "activities", column: "session_id"
   add_foreign_key "participations", "contacts"
   add_foreign_key "participations", "users"
 end

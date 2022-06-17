@@ -19,7 +19,14 @@ class ActivitiesController < ApplicationController
   def index
     @activities = Activity.all
     @user = current_user
-    # @participations = Participation.where(:session_id)
+    @markers = @activities.map do |activity|
+      {
+        lat: activity.spot.latitude,
+        lng: activity.spot.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { activity: activity }),
+        image_url: helpers.asset_url("TAKE OFF 2.png")
+      }
+    end
   end
 
   def show
