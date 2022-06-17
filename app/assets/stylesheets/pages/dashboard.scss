@@ -1,0 +1,48 @@
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .top {
+    background-color: $blue;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 1;
+      color: white;
+      .highlight {
+        padding: 5px 10px;
+        background-color: $pink;
+        border-radius: 8px;
+      }
+    }
+
+  }
+  .incoming {
+    margin-top: 20px;
+    h3 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 1;
+      color: $blue;
+      .highlight {
+        padding: 5px 5px;
+        border: $pink 3px solid;
+        background-color: white;
+        border-radius: 8px;
+        color: $blue;
+      }
+    }
+  }
+}

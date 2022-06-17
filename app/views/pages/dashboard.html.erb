@@ -1,6 +1,12 @@
-<h1>Aloha <%= @user.name %></h1>
-<h3>Mes sessions à venir: <%= @my_future_participations.count %></h3>
-<% @my_future_participations.each do |participation| %>
-  <%= render 'shared/participation_card', participation: participation %>
-<% end %>
-<%= render 'shared/navbar' %>
+<div class="dashboard">
+  <div class="top">
+    <h1>Dashboard de <span class="highlight"><%= @user.name %></span></h1>
+  </div>
+  <div class="incoming">
+    <h3>Mes sessions à venir: <span class="highlight"><%= @my_future_participations.count %></span></h3>
+  </div>
+  <% @my_future_participations.each do |participation| %>
+    <%= render 'shared/participation_card', participation: participation %>
+  <% end %>
+  <%= render 'shared/navbar' %>
+</div>

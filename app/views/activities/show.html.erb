@@ -38,7 +38,7 @@
     </div>
 
     <div class="btn-join-back">
-      <%= link_to "back", activities_path, class: "btn-small" %>
+      <%= link_to 'Back', onclick: "window.history.back();" %>
       <%= link_to "join", new_activity_participation_path(@activity), class: "btn-medium" %>
     </div>
 
