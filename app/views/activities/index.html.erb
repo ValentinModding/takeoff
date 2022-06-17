@@ -1,21 +1,27 @@
 <div class="sessions-index">
-  <div class="map">
-  <div class="search-bar">
+
+  <div class="map" style="width: 100%; height: 600px;"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+
+    <div class="search-bar">
       <div class="search-icon">
         <span class="iconify" data-icon="bi:search">search</span>
       </div>
-    <div class="search-placeholder">
-      <h2> City </h2>
-      <p> City or spot name </p>
+      <div class="search-placeholder">
+        <h2> City </h2>
+        <p> City or spot name </p>
+      </div>
     </div>
+
+    <div class="main-title-session">
+      <h2> Aloha, <span class="highlight"><%= @user.email %> ! </span></h2>
+      <p> We found the best for you this week ! </p>
+    </div>
+
   </div>
 
-  <div class="main-title-session">
-    <h2> Aloha, <span class="highlight"><%= @user.email %> ! </span></h2>
-    <p> We found the best for you this week ! </p>
-  </div>
-
-  </div>
   <div class="cards-container">
     <div class="swipe-up"></div>
     <div class="scroll-container">
@@ -26,5 +32,7 @@
       </div>
     </div>
   </div>
+
 </div>
+
 <%= render 'shared/navbar' %>
