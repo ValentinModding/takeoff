@@ -14,7 +14,6 @@ export default class extends Controller {
     } else {
       this.cardcontainerTarget.style.bottom = "-43%";
       this.swipeupTarget.style.width = "200px";
-      console.log(this.cardcontainerTarget.style.bottom);
     }
 
   }
