@@ -97,18 +97,13 @@
   text-align: center;
   padding: 0 20px 20px 20px;
   transition: all .3s ease-out;
-  &:hover {
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.745);
-  }
   .swipe-up {
-    height: 20px;
-    width: 80px;
+    margin-top: 5px;
+    height: 30px;
+    width: 200px;
     border-radius: 0px 0px 12px 12px;
     background-color: $pink;
-    &:hover {
-      width: 60px;
-    }
+    transition: all .3s ease-out;
   }
 }
 

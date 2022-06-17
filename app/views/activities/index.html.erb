@@ -21,13 +21,12 @@
     </div>
 
   </div>
-
-  <div class="cards-container">
-    <div class="swipe-up"></div>
+  <div class="cards-container" data-index-target="cardcontainer">
+    <div class="swipe-up" data-action="click->index#swipeup" data-index-target="swipeup"></div>
     <div class="scroll-container">
       <div class="card-sessions-container">
-          <% @activities.each do |session| %>
-            <%= render 'shared/session_card', session: session %>
+          <% @activities.each do |activity| %>
+            <%= render 'shared/session_card', activity: activity %>
           <% end %>
       </div>
     </div>
