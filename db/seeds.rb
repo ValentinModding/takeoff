@@ -10,6 +10,7 @@
 
 puts "Rest de la BDD ..."
 
+Participation.destroy_all
 Activity.destroy_all
 Contact.destroy_all
 User.destroy_all
