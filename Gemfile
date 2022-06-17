@@ -38,6 +38,9 @@ gem 'devise'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form', github: 'heartcombo/simple_form'
+#Geocoder
+gem "geocoder"
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
@@ -45,6 +48,7 @@ group :development, :test do  gem 'pry-byebug'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
