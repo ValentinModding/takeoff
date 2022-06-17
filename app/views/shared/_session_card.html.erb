@@ -1,3 +1,4 @@
+<%= link_to activity_path(session) do %>
 <div class="session-card">
   <div class="session-image" style="background-image: url(<%= session.spot.photo.attached? ? cl_image_path(session.spot.photo.key) : asset_path("surfer.jpg") %>)">
     <div class="session-left">
@@ -46,3 +47,4 @@
     <p>14km</p>
   </div>
 </div>
+<% end %>

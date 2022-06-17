@@ -9,7 +9,7 @@
   </div>
 
   <div class="btn-spot">
-    <a class="btn-big" href="#">Afficher le spot</a>
+    <%= link_to "Afficher le spot", spot_path(@activity.spot.id), class: "btn-big" %>
   </div>
 
   <div class= "session-details">
@@ -38,8 +38,8 @@
     </div>
 
     <div class="btn-join-back">
-        <a class="btn-small" href="#"> < back</a>
-        <a class="btn-medium" href="#">join</a>
+      <%= link_to "back", activities_path, class: "btn-small" %>
+      <%= link_to "join", new_activity_participation_path(@activity), class: "btn-medium" %>
     </div>
 
   </div>
