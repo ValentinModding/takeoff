@@ -1,21 +1,21 @@
-<%= link_to activity_path(activity) do %>
+<%= link_to activity_path(participation.activity) do %>
 <div class="session-card">
-  <div class="session-image" style="background-image: url(<%= activity.spot.photo.attached? ? cl_image_path(activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
+  <div class="session-image" style="background-image: url(<%= participation.activity.spot.photo.attached? ? cl_image_path(participation.activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
     <div class="session-left">
       <div class="categorie-session">
         <span class="iconify" data-icon="arcticons:weather">soleil</span>
-        <h6><%= activity.temp %>°</h6>
+        <h6><%= participation.activity.temp %>°</h6>
       </div>
       <div class="categorie-session">
         <span class="iconify" data-icon="carbon:temperature-water">eau</span>
-        <h6><%= activity.water_temp %>°</h6>
+        <h6><%= participation.activity.water_temp %>°</h6>
       </div>
       <div class="categorie-session">
         <span class="iconify" data-icon="map:surfing">surfer</span>
         <h6>+2</h6>
       </div>
       <div class="categorie-session">
-        <% waves_number = activity.wave_height * 2 %>
+        <% waves_number = participation.activity.wave_height * 2 %>
         <% waves_number.times do %>
           <span class="iconify" data-icon="emojione-v1:water-wave">wave</span>
         <% end %>
@@ -26,7 +26,7 @@
         <span class="iconify" data-icon="bi:heart">heart</span>
       </div>
       <div class="session-flag">
-        <% flag_color = activity.flag.downcase %>
+        <% flag_color = participation.activity.flag.downcase %>
         <% if flag_color == "green" %>
           <span class="iconify" data-icon="ooui:flag-rtl" style="color:#4CED52">flag</span>
         <% elsif flag_color == "yellow" %>
@@ -39,10 +39,10 @@
   </div>
   <div class="session-bottom">
     <% months = ["Janvier", "Février", "Mars", "Avril", "Mai" , "Juin", "Juillet" , "Aout" , "Septembre", "Octobre", "Novembre", "Décembre"] %>
-    <p> <%= activity.date_time_start.day %> &nbsp;</p>
-    <p> <%= months[activity.date_time_start.month - 1] %> &nbsp;</p>
+    <p> <%= participation.activity.date_time_start.day %> &nbsp;</p>
+    <p> <%= months[participation.activity.date_time_start.month - 1] %> &nbsp;</p>
     <span class="pink"> ● &nbsp;</span>
-    <p> <%=  %> <%= activity.spot.name %> &nbsp;</p>
+    <p> <%=  %> <%= participation.activity.spot.name %> &nbsp;</p>
     <span class="pink"> ● &nbsp;</span>
     <p>14km</p>
   </div>
