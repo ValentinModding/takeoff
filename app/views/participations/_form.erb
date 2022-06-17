@@ -1,0 +1,10 @@
+<div style="display: flex;flex-direction: column">
+  <div class="">
+    <%= simple_form_for([@activity, @participation]) do |f| %>
+      <%= f.input :start, :label => "Start Date" %>
+      <%= f.input :end, :label => "End Date" %>
+      <%= f.input :contact_id, :label => "Choose your emergency contact" ,:collection => @contacts%>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+</div>
