@@ -55,7 +55,8 @@
   text-align: center;
   color: white;
   font-weight: bold;
-  z-index: 2;
+  z-index: 100;
+  margin-top: 100px;
   .highlight{
     background-color: $pink;
     border-radius: 8px;
@@ -67,6 +68,7 @@
   height: 100vh;
   width: 100%;
   position:inherit;
+  overflow: auto;
 
 
   .mapboxgl-popup {
@@ -83,6 +85,7 @@
 }
 
 .cards-container {
+  z-index: 100;
   position: fixed;
   bottom: -43%;
   height: 55%;
@@ -98,8 +101,9 @@
   padding: 0 20px 20px 20px;
   transition: all .3s ease-out;
   .swipe-up {
+    z-index: 100;
     margin-top: 5px;
-    height: 30px;
+    height: 40px;
     width: 200px;
     border-radius: 0px 0px 12px 12px;
     background-color: $pink;
@@ -129,9 +133,4 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding-bottom: 50px;
-}
-
-
-.mapboxgl-canvas {
-  z-index: -100;
 }
