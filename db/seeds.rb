@@ -39,7 +39,7 @@ spot1 = Spot.create!(
 
 spot2 = Spot.create!(
   name: "Les Culs Nus",
-  address: "Boulevard du Front de Mer, Soorts-Hossegor, France",
+  address: "62 Av. des Tamaris, 40150 Soorts-Hossegor",
   description: "description spot 2"
 )
 
@@ -63,7 +63,7 @@ spot5 = Spot.create!(
 
 spot6 = Spot.create!(
   name: "La Grande Plage",
-  address: "Grande Plage, 1 Boulevard du Général de Gaulle, 64200 Biarritz, France",
+  address: "1 Boulevard du Général de Gaulle, 64200 Biarritz, France",
   description: "description spot 6"
 )
 
