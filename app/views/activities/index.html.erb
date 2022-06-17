@@ -1,4 +1,4 @@
-<div class="sessions-index">
+<div class="sessions-index" data-controller="index">
   <div class="map">
     <div class="search-bar">
         <div class="search-icon">
@@ -11,14 +11,14 @@
     </div>
 
     <div class="main-title-session">
-      <h2> Aloha, <span class="highlight"><%= @user.email %> ! </span></h2>
+      <h2> Aloha, <span class="highlight"><%= @user.name %> ! </span></h2>
       <p> We found the best for you this week ! </p>
     </div>
 
   </div>
-  
-  <div class="cards-container">
-    <div class="swipe-up"></div>
+
+  <div class="cards-container" data-index-target="cardcontainer">
+    <div class="swipe-up" data-action="click->index#swipeup" data-index-target="swipeup"></div>
     <div class="scroll-container">
       <div class="card-sessions-container">
           <% @activities.each do |session| %>
