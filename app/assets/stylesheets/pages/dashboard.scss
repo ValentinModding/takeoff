@@ -8,6 +8,23 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+
+  #btn-logout {
+    display: flex;
+    color: white;
+    height: 40px;
+    padding: 15px 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #FF6363;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+  }
   a {
     text-decoration: none !important;
   }
