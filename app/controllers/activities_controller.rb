@@ -28,6 +28,11 @@ class ActivitiesController < ApplicationController
         image_url: helpers.asset_url("TAKE OFF 2.png")
       }
     end
+    if params[:query].present?
+      @activities = Activity.search(params[:query])
+    else
+      @activities
+    end
   end
 
   def show
