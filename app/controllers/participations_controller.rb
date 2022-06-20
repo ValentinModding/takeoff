@@ -1,3 +1,5 @@
+require 'twilio-ruby'
+
 class ParticipationsController < ApplicationController
   before_action :set_activity, only: [:new, :create]
   before_action :set_participation, only: [:destroy]
@@ -9,11 +11,24 @@ class ParticipationsController < ApplicationController
     # authorize @participation
   end
 
+  def send_sms
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
+    @client = Twilio::REST::Client.new(account_sid, auth_token)
+
+    message = @client.messages.create(
+      body: "#{@participation.user.name} is surfing from #{@participation.start} to #{@participation.end} at #{@participation.activity.spot.name}",
+      from: '+19032824020',
+      to: '+'
+    )
+  end
+
   def create
     @participation = Participation.new(participation_params)
     @participation.activity = @activity
     @participation.user = current_user
     if @participation.save!
+      send_sms
       redirect_to dashboard_path
     else
       :new
