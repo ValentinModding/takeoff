@@ -25,7 +25,7 @@
 
       <div class="session-div">
         <i class="iconify" data-icon="carbon:wave-period"></i>
-        <p>Info marée : surfer entre <strong><%= @activity.date_time_start.hour %>h et <%= @activity.date_time_end.hour %>h</strong></p>
+        <p>Info marée : surfer entre <strong><%= @activity.date_time_start.strftime('%Hh%M')%> et <%= @activity.date_time_end.strftime('%Hh%M')%></strong></p>
       </div>
 
       <div class="session-div">
