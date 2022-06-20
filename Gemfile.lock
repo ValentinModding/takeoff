@@ -113,6 +113,10 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.7.0)
+    faraday (2.3.0)
+      faraday-net_http (~> 2.0)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (2.0.3)
     ffi (1.15.5)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
@@ -136,6 +140,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
+    jwt (2.4.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -252,6 +257,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rexml (3.2.5)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -283,6 +289,10 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
+    twilio-ruby (5.67.3)
+      faraday (>= 0.9, < 3.0)
+      jwt (>= 1.5, <= 2.5)
+      nokogiri (>= 1.6, < 2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -342,6 +352,7 @@ DEPENDENCIES
   simple_form!
   spring
   turbolinks (~> 5)
+  twilio-ruby
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
@@ -351,4 +362,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.16
+   2.3.15
