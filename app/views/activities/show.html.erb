@@ -1,48 +1,58 @@
-<div class= show-session>
+<div class= show-session >
 
-  <div class="banner">
+  <div class="banner" style="background-image: url(<%= @activity.spot.photo.attached? ? cl_image_path(@activity.spot.photo.key) : image_tag("surfer.jpg") %>)">
     <div class="container">
       <h1>Session</h1>
-      <h2>La côte des basques</h2>
+      <h2><%= @activity.spot.name %></h2>
     </div>
-
+    <div class="btn-spot">
+      <%= link_to "Afficher le spot", spot_path(@activity.spot.id), class: "btn-big" %>
+    </div>
   </div>
 
-  <div class="btn-spot">
-    <%= link_to "Afficher le spot", spot_path(@activity.spot.id), class: "btn-big" %>
-  </div>
 
   <div class= "session-details">
-
     <div class="session-content">
-      <i class="iconify" data-icon="carbon:wave-height"></i>
-      <p>Environ 1 mètre de vague</p>
+      <div class="session-div">
+        <i class="iconify" data-icon="carbon:wave-height"></i>
+        <p>Environ <%= @activity.wave_height %>m de vague</p>
+      </div>
 
-      <i class="iconify" data-icon="carbon:skill-level-basic"></i>
-      <p>Niveau: moyen à confirmé</p>
+      <div class="session-div">
+        <i class="iconify" data-icon="carbon:skill-level-basic"></i>
+        <p>Niveau: moyen à confirmé</p>
+      </div>
 
-      <i class="iconify" data-icon="carbon:wave-period"></i>
-      <p>Info marée : surfer entre 9h et 12h</p>
+      <div class="session-div">
+        <i class="iconify" data-icon="carbon:wave-period"></i>
+        <p>Info marée : surfer entre 9h et 12h ,<%= @activity %></p>
+      </div>
 
-      <i class="iconify" data-icon="akar-icons:info"></i>
-      <p>Spot très fréquenté mais très accessible pour les débutants</p>
+      <div class="session-div">
+        <i class="iconify" data-icon="akar-icons:info"></i>
+        <p>Spot très fréquenté mais très accessible pour les débutants</p>
+      </div>
 
-      <i class="iconify" data-icon="arcticons:night-light"></i>
-      <p>Longboard, combinaison 3-2</p>
+      <div class="session-div">
+        <i class="iconify" data-icon="arcticons:night-light"></i>
+        <p>Combinaison recommandée : <%= @wetsuit %></p>
+      </div>
 
-    </div>
-
-    <div class= "buddies">
-      <span class="iconify" data-icon="map:surfing"></span>
-      <img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+      <div class= "buddies">
+        <span class="iconify surf" data-icon="map:surfing"></span>
+          <div class="avatars">
+            <% @participations.each do |participation| %>
+              <%= participation.user.photo.attached? ? cl_image_tag(participation.user.photo.key, height: 40, width: 40, crop: :fill ) : image_tag("surfer.jpg")%>
+            <% end %>
+          </div>
+      </div>
     </div>
 
     <div class="btn-join-back">
-      <%= link_to 'Back', onclick: "window.history.back();" %>
+      <%= link_to 'Back', onclick: "window.history.back();", id: "icone-arrow" do %>
+        <h2 class="btn-small" >Back</h2>
+      <% end %>
       <%= link_to "join", new_activity_participation_path(@activity), class: "btn-medium" %>
     </div>
-
   </div>
-
-
 </div>
