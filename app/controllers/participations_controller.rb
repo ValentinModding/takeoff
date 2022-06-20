@@ -14,7 +14,7 @@ class ParticipationsController < ApplicationController
     @participation.activity = @activity
     @participation.user = current_user
     if @participation.save!
-      redirect_to dashboard_path
+      redirect_to activity_participation_path(@activity, @participation)
     else
       :new
     end

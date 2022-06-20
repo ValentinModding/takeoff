@@ -1,0 +1,44 @@
+.toto {
+  background-color: pink;
+  height: 100vh;
+  width: 100%;
+  .banner {
+    padding: 150px 0;
+    background-position: inherit;
+  }
+  .participation-content {
+      display: flex;
+      justify-content: center;
+  }
+  h1 {
+    justify-content: center;
+    color: white;
+    background: #FF1569;
+    font-family: Montserrat;
+    width: 309px;
+    height: 34px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    position: absolute;
+    left: 64px;
+    top: 69px;
+  }
+
+  h3 {
+    color: #0A376E;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: center;
+    position: absolute;
+    left: 17.39%;
+    right: 16.43%;
+    top: 20.88%;
+    bottom: 62.63%;
+  }
+}
