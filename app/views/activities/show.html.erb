@@ -41,8 +41,12 @@
       <div class= "buddies">
         <span class="iconify surf" data-icon="map:surfing"></span>
           <div class="avatars">
-            <% @participations.each do |participation| %>
-              <%= participation.user.photo.attached? ? cl_image_tag(participation.user.photo.key, height: 40, width: 40, crop: :fill ) : image_tag("surfer.jpg")%>
+            <% if @participations.count == 0 %>
+              <h2>Il n'y a pas encore de participants !</h2>
+            <% else %>
+              <% @participations.each do |participation| %>
+                <%= participation.user.photo.attached? ? cl_image_tag(participation.user.photo.key, height: 40, width: 40, crop: :fill ) : image_tag("surfer.jpg")%>
+              <% end %>
             <% end %>
           </div>
       </div>
