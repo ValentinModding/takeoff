@@ -30,6 +30,18 @@ class ActivitiesController < ApplicationController
   end
 
   def show
+    @participations = Participation.includes(:user).where(activity: @activity)
+    @wetsuit = ""
+    wetsuits = ["Shorty", "3/2", "4/3", "5/4"]
+    if @activity.water_temp > 24
+      @wetsuit = wetsuits[0]
+    elsif @activity.water_temp < 24 && @activity.water_temp > 17
+      @wetsuit = wetsuits[1]
+    elsif @activity.water_temp < 17 && @activity.water_temp > 12
+      @wetsuit = wetsuits[2]
+    else
+      @wetsuit = wetsuits[3]
+    end
   end
 
   def edit
