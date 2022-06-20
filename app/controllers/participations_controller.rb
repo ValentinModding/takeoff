@@ -11,7 +11,7 @@ class ParticipationsController < ApplicationController
 
   def create
     @participation = Participation.new(participation_params)
-    # @participation.activity = @activity
+    @participation.activity = @activity
     @participation.user = current_user
     if @participation.save!
       redirect_to dashboard_path
