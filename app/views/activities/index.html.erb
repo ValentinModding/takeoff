@@ -7,17 +7,6 @@
     data-controller="mapbox"
     data-mapbox-markers-value="<%= @markers.to_json %>"
     data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-
-
-    <div class="search-bar">
-      <div class="search-icon">
-        <span class="iconify" data-icon="bi:search">search</span>
-      </div>
-      <div class="search-placeholder">
-        <h2> City </h2>
-        <p> City or spot name </p>
-      </div>
-    </div>
   </div>
 
   <div class="cards-container" data-index-target="cardcontainer">
