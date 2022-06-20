@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :get_participations, only: [:show, :index]
 
   def new
     @activity = Activity.new
@@ -30,7 +31,6 @@ class ActivitiesController < ApplicationController
   end
 
   def show
-    @participations = Participation.includes(:user).where(activity: @activity)
     @wetsuit = ""
     wetsuits = ["Shorty", "3/2", "4/3", "5/4"]
     if @activity.water_temp > 24
@@ -63,5 +63,9 @@ class ActivitiesController < ApplicationController
 
   def activity_params
     params.require(:activity).permit(:wave_height, :wind, :period, :wind_direction, :wave_direction, :min_score, :date_time_start, :date_time_end, :tips, :photo, :spot )
+  end
+
+  def get_participations
+    @participations = Participation.includes(:user).where(activity: @activity)
   end
 end
