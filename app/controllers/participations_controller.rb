@@ -17,7 +17,7 @@ class ParticipationsController < ApplicationController
     @client = Twilio::REST::Client.new(account_sid, auth_token)
 
     message = @client.messages.create(
-      body: "#{@participation.user.name} is surfing from: \n#{@participation.start.to_formatted_s(:short)} to #{@participation.end.to_formatted_s(:short)} at \n#{@participation.activity.spot.name}",
+      body: "#{@participation.user.name} is surfing the #{@participation.activity.date_time_start.to_formatted_s(:short)}\nfrom: #{@participation.start.to_formatted_s(:short)}\nto #{@participation.end.to_formatted_s(:short)}\nat \n#{@participation.activity.spot.name}",
       from: '+19032824020',
       to: "+33#{@participation.contact.tel}"
     )
@@ -26,6 +26,7 @@ class ParticipationsController < ApplicationController
   def create
     @participation = Participation.new(participation_params)
     @participation.activity = @activity
+    # @participation.start = @activity.date_time_start.time
     @participation.user = current_user
     if @participation.save!
       send_sms

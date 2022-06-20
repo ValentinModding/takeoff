@@ -76,8 +76,8 @@ ActiveRecord::Schema.define(version: 2022_06_17_084246) do
   end
 
   create_table "participations", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "end"
+    t.time "start"
+    t.time "end"
     t.bigint "activity_id", null: false
     t.bigint "user_id", null: false
     t.bigint "contact_id", null: false
