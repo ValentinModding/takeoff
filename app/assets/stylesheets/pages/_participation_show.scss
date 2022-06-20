@@ -1,22 +1,29 @@
-.toto {
-  background-color: pink;
-  height: 100vh;
+.show-participation {
+  background-image: url(surfer-plage.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   width: 100%;
+  height: 100vh;
+
   .banner {
     padding: 150px 0;
-    background-position: inherit;
+    // background-position: inherit;
   }
+
   .participation-content {
       display: flex;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
   }
+
   h1 {
+    display: flex;
     justify-content: center;
+    align-items: center;
     color: white;
     background: #FF1569;
     font-family: Montserrat;
-    width: 309px;
-    height: 34px;
     font-size: 25px;
     font-weight: 700;
     letter-spacing: 0em;
@@ -24,11 +31,14 @@
     border-radius: 8px;
     text-decoration: none;
     position: absolute;
-    left: 64px;
-    top: 69px;
+    width: 309px;
+    height: 37px;
+    left: 41px;
+    top: 91px;
   }
 
   h3 {
+    display: flex;
     color: #0A376E;
     font-family: Montserrat;
     font-size: 18px;

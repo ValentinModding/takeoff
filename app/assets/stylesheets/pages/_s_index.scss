@@ -1,0 +1,136 @@
+.sessions-index {
+  // background-color: red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  height: 50px;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  opacity: 60%;
+  box-shadow: 1px 6px 16px 0px black;
+  border: 2px white solid inset;
+  border-radius: 50px 50px 50px 50px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  z-index: 2;
+  .search-icon {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconify {
+    width: 60px;
+    font-size: 24px;
+    justify-content: center;
+    color: $pink;
+  }
+
+  .search-placeholder {
+    margin-top: px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $pink;
+    h2 {
+    font-size: 18px;
+    font-weight: bold;
+    }
+    p {
+      font-size: 12px;
+      }
+  }
+  }
+
+.main-title-session {
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+  z-index: 100;
+  margin-top: 100px;
+  .highlight{
+    background-color: $pink;
+    border-radius: 8px;
+    padding: 2px 5px;
+  }
+}
+
+.map {
+  height: 100vh;
+  width: 100%;
+  position:inherit;
+  overflow: auto;
+
+
+  .mapboxgl-popup {
+    max-width: 200px;
+  }
+
+  .mapboxgl-popup-content {
+    border-radius: 20px;
+    background-color: $pink;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+
+}
+
+.cards-container {
+  z-index: 100;
+  position: fixed;
+  bottom: -43%;
+  height: 55%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.777);
+  border-radius: 30px 30px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+  transition: all .3s ease-out;
+  .swipe-up {
+    z-index: 100;
+    margin-top: 5px;
+    height: 40px;
+    width: 200px;
+    border-radius: 0px 0px 12px 12px;
+    background-color: $pink;
+    transition: all .3s ease-out;
+  }
+}
+
+
+
+.card-session-overlay {
+  position: sticky;
+  top: 0;
+  height: 30px;
+  width: 100%;
+  background-color: white;
+}
+
+.card-session-top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.scroll-container {
+  margin-top: 25px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
