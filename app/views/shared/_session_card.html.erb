@@ -1,7 +1,7 @@
 <%= link_to activity_path(activity) do %>
 <div class="session-card">
-  <div class="session-image" style="background-image: url(<%= activity.spot.photo.attached? ? cl_image_path(activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
-    <div class="session-left">
+  <div class="session-image" style="background-image: url(<%= activity.spot.photo.attached? ? cl_image_path(activity.spot.photo.key) : image_tag("surfer.jpg") %>)">
+    <div class="session-left">t
       <div class="categorie-session">
         <span class="iconify" data-icon="arcticons:weather">soleil</span>
         <h6><%= activity.temp %>°</h6>
