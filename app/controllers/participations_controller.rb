@@ -17,9 +17,9 @@ class ParticipationsController < ApplicationController
     @client = Twilio::REST::Client.new(account_sid, auth_token)
 
     message = @client.messages.create(
-      body: "#{@participation.user.name} is surfing from #{@participation.start} to #{@participation.end} at #{@participation.activity.spot.name}",
+      body: "#{@participation.user.name} is surfing from: \n#{@participation.start.to_formatted_s(:short)} to #{@participation.end.to_formatted_s(:short)} at \n#{@participation.activity.spot.name}",
       from: '+19032824020',
-      to: '+'
+      to: "+33#{@participation.contact.tel}"
     )
   end
 
