@@ -1,10 +1,10 @@
 <div style="display: flex;flex-direction: column">
   <div class="session_form">
     <%= simple_form_for([@activity, @participation]) do |f| %>
-      <%= f.input :start, :label => "Heure de début :" %>
-      <%= f.input :end, :label => "Heure de fin :" %>
-      <%= f.input :contact_id, :label => "Choisir mon contact d'urgence :" ,:collection => @contacts%>
-      <%= f.submit "Confirmer" %>
+      <%= f.input :start, as: :time, :label => "Heure de début :" %>
+      <%= f.input :end, as: :time, :label => "Heure de fin :" %>
+      <%= f.input :contact_id, :label => "Choisir mon contact d'urgence :", :collection => @contacts %>
+      <%= f.submit "Con,firmer" %>
     <% end %>
   </div>
 </div>
