@@ -48,6 +48,7 @@
     letter-spacing: 0em;
     margin-block-start: auto;
     margin-block-end: auto;
+    text-align: justify;
   }
 
   .banner {
@@ -105,7 +106,7 @@
   .session-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     row-gap: 15px;
     width: 100%;
     text-align: left;
