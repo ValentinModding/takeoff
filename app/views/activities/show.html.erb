@@ -4,9 +4,9 @@
     <div class="container">
       <h1>Session</h1>
       <h2><%= @activity.spot.name %></h2>
-    </div>
     <div class="btn-spot">
       <%= link_to "Afficher le spot", spot_path(@activity.spot.id), class: "btn-big" %>
+    </div>
     </div>
   </div>
 
@@ -30,7 +30,7 @@
 
       <div class="session-div">
         <i class="iconify" data-icon="akar-icons:info"></i>
-        <p>Spot très fréquenté mais très accessible pour les débutants</p>
+        <p><%= @activity.tips %></p>
       </div>
 
       <div class="session-div">
@@ -56,3 +56,4 @@
     </div>
   </div>
 </div>
+<% console %>
