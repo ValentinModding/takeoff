@@ -122,7 +122,7 @@ puts "creation contact"
 contact1 = Contact.create!(
   name: "Julien",
   email: "julien@gmail.com",
-  tel: "0603442620",
+  tel: "603442620",
   user: user1
 )
 puts "contacts crées avec succes"

@@ -28,19 +28,24 @@ class ActivitiesController < ApplicationController
         image_url: helpers.asset_url("TAKE OFF 2.png")
       }
     end
+    if params[:query].present?
+      @activities = Activity.search(params[:query])
+    else
+      @activities
+    end
   end
 
   def show
     @wetsuit = ""
     wetsuits = ["Shorty", "3/2", "4/3", "5/4"]
-    if @activity.water_temp > 24
-      @wetsuit = wetsuits[0]
-    elsif @activity.water_temp < 24 && @activity.water_temp > 17
-      @wetsuit = wetsuits[1]
-    elsif @activity.water_temp < 17 && @activity.water_temp > 12
-      @wetsuit = wetsuits[2]
-    else
+    if @activity.water_temp < 12
       @wetsuit = wetsuits[3]
+    elsif @activity.water_temp > 12 && @activity.water_temp < 17
+      @wetsuit = wetsuits[2]
+    elsif @activity.water_temp > 17 && @activity.water_temp < 22
+      @wetsuit = wetsuits[1]
+    else
+      @wetsuit = wetsuits[0]
     end
   end
 

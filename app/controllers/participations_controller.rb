@@ -1,12 +1,14 @@
 require 'twilio-ruby'
 
 class ParticipationsController < ApplicationController
-  before_action :set_activity, only: [:new, :create]
+  before_action :set_activity, only: [:new, :create, :show]
   before_action :set_participation, only: [:destroy]
 
   def new
     @user = current_user
     @participation = Participation.new
+    @participation.start = @activity.date_time_start
+    @participation.end = @activity.date_time_end
     @contacts = Contact.where(user: current_user)
     # authorize @participation
   end
@@ -17,8 +19,8 @@ class ParticipationsController < ApplicationController
     @client = Twilio::REST::Client.new(account_sid, auth_token)
 
     message = @client.messages.create(
-      body: "#{@participation.user.name} is surfing from: \n#{@participation.start.to_formatted_s(:short)} to #{@participation.end.to_formatted_s(:short)} at \n#{@participation.activity.spot.name}",
-      from: '+19032824020',
+      body: "#{@participation.user.name} is surfing the #{@participation.activity.date_time_start.to_formatted_s(:short)}\nfrom: #{@participation.start.to_formatted_s(:short)}\nto #{@participation.end.to_formatted_s(:short)}\nat #{@participation.activity.spot.name}",
+      from: '+12512577944',
       to: "+33#{@participation.contact.tel}"
     )
   end
@@ -29,7 +31,7 @@ class ParticipationsController < ApplicationController
     @participation.user = current_user
     if @participation.save!
       send_sms
-      redirect_to dashboard_path
+      redirect_to activity_participation_path(@activity, @participation)
     else
       :new
     end
