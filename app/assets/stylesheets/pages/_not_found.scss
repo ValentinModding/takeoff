@@ -1,0 +1,39 @@
+.not_found {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  a {
+    text-decoration: none;
+  }
+  #btn-login {
+    display: flex;
+    padding: 25px 30px;
+    color: white;
+    height: 40px;
+    width: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    background-color: #FF6363;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  h1 {
+    font-family: 'Montserrat';
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+  }
+
+}
