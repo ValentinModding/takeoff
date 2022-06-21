@@ -19,7 +19,7 @@
     background: #FF1569;
     border-radius: 8px;
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 144px;
   }
 
   h2 {
@@ -34,6 +34,20 @@
     margin-top: 15px;
   }
 
+  h3 {
+    color: white;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 16px;
+  }
+
+
   p {
     color:#0A376E;
     font-family: Montserrat;
@@ -46,7 +60,7 @@
   }
 
   .banner {
-    background-image: url(https://unsplash.com/photos/pdJIz5NT1yE);
+    background-image: url("https://images.unsplash.com/photo-1630651508188-a628e7b64e1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
