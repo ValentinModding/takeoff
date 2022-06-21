@@ -1,7 +1,7 @@
 require 'twilio-ruby'
 
 class ParticipationsController < ApplicationController
-  before_action :set_activity, only: [:new, :create]
+  before_action :set_activity, only: [:new, :create, :show]
   before_action :set_participation, only: [:destroy]
 
   def new
