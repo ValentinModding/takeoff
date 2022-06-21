@@ -15,17 +15,17 @@
     <div class="session-content">
       <div class="session-div">
         <i class="iconify" data-icon="carbon:wave-height"></i>
-        <p>Environ <%= @activity.wave_height %>m de vague</p>
+        <p>Environ <strong><%= @activity.wave_height %>m</strong> de vague</p>
       </div>
 
       <div class="session-div">
         <i class="iconify" data-icon="carbon:skill-level-basic"></i>
-        <p>Niveau: moyen à confirmé</p>
+        <p>Niveau: <strong>moyen à confirmé</strong> </p>
       </div>
 
       <div class="session-div">
         <i class="iconify" data-icon="carbon:wave-period"></i>
-        <p>Info marée : surfer entre 9h et 12h ,<%= @activity %></p>
+        <p>Info marée : surfer entre <strong><%= @activity.date_time_start.strftime('%Hh%M')%> et <%= @activity.date_time_end.strftime('%Hh%M')%></strong></p>
       </div>
 
       <div class="session-div">
@@ -35,14 +35,18 @@
 
       <div class="session-div">
         <i class="iconify" data-icon="arcticons:night-light"></i>
-        <p>Combinaison recommandée : <%= @wetsuit %></p>
+        <p>Combinaison recommandée : <strong><%= @wetsuit %></strong></p>
       </div>
 
       <div class= "buddies">
         <span class="iconify surf" data-icon="map:surfing"></span>
           <div class="avatars">
-            <% @participations.each do |participation| %>
-              <%= participation.user.photo.attached? ? cl_image_tag(participation.user.photo.key, height: 40, width: 40, crop: :fill ) : image_tag("surfer.jpg")%>
+            <% if @participations.count == 0 %>
+              <h2>Il n'y a pas encore de participants !</h2>
+            <% else %>
+              <% @participations.each do |participation| %>
+                <%= participation.user.photo.attached? ? cl_image_tag(participation.user.photo.key, height: 40, width: 40, crop: :fill ) : image_tag("surfer.jpg")%>
+              <% end %>
             <% end %>
           </div>
       </div>

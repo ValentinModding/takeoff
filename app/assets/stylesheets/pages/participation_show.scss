@@ -1,0 +1,54 @@
+.show-participation {
+  background-image: url(surfer-plage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position-x: center;
+
+  .banner {
+    padding: 150px 0;
+  }
+
+  .participation-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #FF1569;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    position: absolute;
+    width: 309px;
+    height: 37px;
+    left: 41px;
+    top: 91px;
+  }
+
+  h3 {
+    display: flex;
+    color: #0A376E;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: center;
+    position: absolute;
+    left: 17.39%;
+    right: 16.43%;
+    top: 20.88%;
+    bottom: 62.63%;
+  }
+}

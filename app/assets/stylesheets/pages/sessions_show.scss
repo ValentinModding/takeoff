@@ -48,6 +48,7 @@
     letter-spacing: 0em;
     margin-block-start: auto;
     margin-block-end: auto;
+    text-align: justify;
   }
 
   .banner {
@@ -62,7 +63,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    box-shadow: -500px 20px 0px #00000052 inset;
+    background-color: #00000052;
     .container {
       display: flex;
       flex-direction: column;
@@ -93,6 +94,7 @@
     border-radius: 38px 38px 0px 0px;
     padding: 15px;
     justify-content: space-between;
+    width: 100%;
     .iconify {
     margin-right: 20px;
     color: #0a376e;
@@ -104,7 +106,7 @@
   .session-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     row-gap: 15px;
     width: 100%;
     text-align: left;
@@ -130,9 +132,15 @@
       flex-direction: row;
       justify-content: flex-start;
       border-radius: 50%;
+      h2 {
+        color: #0A376E;
+        font-size: 12px;
+      }
       img {
         border-radius: 50%;
         margin-left: 10px;
+        height: 30px;
+        width: 30px;
       }
     }
   }
