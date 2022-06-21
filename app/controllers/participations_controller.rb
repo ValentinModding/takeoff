@@ -34,7 +34,7 @@ with #{@activity.participations_count} buddies",
     @participation.activity = @activity
     @participation.user = current_user
     if @participation.save!
-      # send_sms
+      send_sms
       redirect_to activity_participation_path(@activity, @participation)
     else
       :new
