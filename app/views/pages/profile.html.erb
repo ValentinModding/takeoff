@@ -1,6 +1,33 @@
-<% @contacts.each do |contact| %>
-  <div>
-    <%= contact.name %>
+<div class="profile">
+
+  <div class="background_edit">
+    <div class="user-name">
+      <%= @user.name %>
+    </div>
+
+    <div class="user-picture-name">
+        <img class="avatar" alt="avatar" src="https://scontent.fcdg4-1.fna.fbcdn.net/v/t1.18169-9/14040100_1659643937684783_7350282897754591794_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=7cTzhCBNIawAX92hei6&_nc_ht=scontent.fcdg4-1.fna&oh=00_AT_5BqrcJLjzEpv8bUqwVxPD-ONbkQgEW-svVEwEbw2o4Q&oe=62D6A069" />
+        <div class="name">
+        <h2> Mathilde Perriol </h2>
+        <p> mathilde@takeoff.com </p>
+        <p> 06 45 67 89 00 </p>
+        </div>
+    </div>
+
+    <div class="contact">
+      <h2> Mes contacts d'urgence </h2>
+      <div class="contact-name">
+        <% @contacts.each do |contact| %>
+        <div class="box-name">
+          <p> <%= contact.name %> <p>
+        </div>
+      <% end %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= link_to "Ajouter un nouveau contact d'urgence", new_contact_path %>
+    </div>
   </div>
-<% end %>
-<%= link_to "Add a new contact", new_contact_path %>
+
+</div>
