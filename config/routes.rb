@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#pres'
 
+
+
   resources :spots, only: [:show]
 
   resources :activities do
