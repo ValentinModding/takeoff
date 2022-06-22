@@ -1,7 +1,8 @@
 <div class="sessions-index" data-controller="index">
     <div class="main-title-session">
         <h2>Aloha, <span class="highlight"><%= @user.name %> ! </span></h2>
-        <p> We found the best spots for you this week ! </p>
+        <br>
+        <p> Découvre les sessions de la semaine adaptées à ton niveau ! </p>
     </div>
   <div class="map" style="width: 100%; height: 100vh;"
     data-controller="mapbox"
@@ -12,7 +13,7 @@
   <div class="cards-container" data-index-target="cardcontainer">
     <div class="swipe-up" data-action="click->index#swipeup" data-index-target="swipeup"></div>
     <div class="scroll-container">
-      <h3>Nous avons trouvé <strong><%= @activities.count %></strong> sessions</h3>
+      <h3>Nous avons trouvé <font color= "#FF1569"><strong><%= @activities.count %></strong></font> sessions</h3>
       <div class="card-sessions-container">
           <% @activities.each do |activity| %>
             <%= render 'shared/session_card', activity: activity %>
