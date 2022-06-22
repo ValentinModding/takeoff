@@ -13,19 +13,32 @@ class ParticipationsController < ApplicationController
     # authorize @participation
   end
 
-  def send_sms
+  def send_sms_to_contact
     account_sid = ENV['TWILIO_ACCOUNT_SID']
     auth_token = ENV['TWILIO_AUTH_TOKEN']
     @client = Twilio::REST::Client.new(account_sid, auth_token)
 
     message = @client.messages.create(
-      body: "#{@participation.user.name} is surfing the #{@participation.activity.date_time_start.to_formatted_s(:short)}\n
-from: #{@participation.start.to_formatted_s(:short)}\n
-to #{@participation.end.to_formatted_s(:short)}\n
-at #{@participation.activity.spot.name}\n
-with #{@activity.participations_count} buddies",
-      from: '+12512577944',
-      to: "+33#{@participation.contact.tel}"
+      body: "#{@participation.user.name} surf le #{@participation.activity.date_time_start.strftime("%d/%m/%Y")}
+de #{@participation.start.strftime("%Hh%M")}
+à #{@participation.end.strftime("%Hh%M")}
+à #{@participation.activity.spot.name}
+avec #{@activity.participations_count} buddies",
+      from: '+19032824020',
+      to: "+33#{@participation.contact.tel}}"
+    )
+  end
+
+  def sms_rappel
+    @user = current_user
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
+    @client = Twilio::REST::Client.new(account_sid, auth_token)
+
+    message = @client.messages.create(
+      body: "#{@participation.contact.name} est prévenu de ton départ en session. Pense à le prévenir quand tu seras rentrée. Bon surf !",
+      from: '+19032824020',
+      to: "+33#{@user.tel}}"
     )
   end
 
@@ -34,7 +47,8 @@ with #{@activity.participations_count} buddies",
     @participation.activity = @activity
     @participation.user = current_user
     if @participation.save!
-      # send_sms
+      send_sms_to_contact
+      sms_rappel
       redirect_to activity_participation_path(@activity, @participation)
     else
       :new
