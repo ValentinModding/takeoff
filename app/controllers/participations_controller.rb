@@ -24,7 +24,7 @@ de #{@participation.start.strftime("%Hh%M")}
 à #{@participation.end.strftime("%Hh%M")}
 à #{@participation.activity.spot.name}
 avec #{@activity.participations_count} buddies",
-      from: '+19032824020',
+      from: '+12512577944',
       to: "+33#{@participation.contact.tel}}"
     )
   end
@@ -37,7 +37,7 @@ avec #{@activity.participations_count} buddies",
 
     message = @client.messages.create(
       body: "#{@participation.contact.name} est prévenu de ton départ en session. Pense à le prévenir quand tu seras rentrée. Bon surf !",
-      from: '+19032824020',
+      from: '+12512577944',
       to: "+33#{@user.tel}}"
     )
   end

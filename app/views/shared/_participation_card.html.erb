@@ -1,12 +1,21 @@
 <div class="participation-card" style="background-image: url(<%= participation.activity.spot.photo.attached? ? cl_image_path(participation.activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
-  <h1>Session du <%= participation.activity.date_time_start.strftime("%d/%m/%Y à %Hh %M")%></h1>
-  <h2>Préviens <%= participation.contact.name %> que ta session est terminée !</h2>
-
-  <%= link_to activity_participation_path(participation.activity, participation), method: :patch do %>
-  <div class="session-terminee">
-    <h3 class="text-terminee"><%= participation.status? ? "SMS envoyé" : "session terminée !" %></h3>
-  </div>
+  <% if participation.status? %>
+    <h1>Session du <%= participation.activity.date_time_start.strftime("%d/%m/%Y à %Hh %M")%></h1>
+    <h2><%= participation.contact.name %> a bien été prévenu !</h2>
+      <div class="session-terminee sms-envoye">
+        <span class="iconify text-sms" data-icon="bi:check-lg"></span>
+        <h3 class="text-sms">SMS envoyé</h3>
+      </div>
+  <% else %>
+      <h1>Session du <%= participation.activity.date_time_start.strftime("%d/%m/%Y à %Hh %M")%></h1>
+      <h2>Préviens <%= participation.contact.name %> que ta session est terminée !</h2>
+    <%= link_to activity_participation_path(participation.activity, participation), method: :patch, remote: true do %>
+      <div class="session-terminee">
+        <h3 class="text-terminee">session terminée !</h3>
+      </div>
+    <% end %>
   <% end %>
+
 
   <%= link_to activity_path(participation.activity) do%>
   <div class="show-session-btn">

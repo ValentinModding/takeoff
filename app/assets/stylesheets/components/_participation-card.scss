@@ -1,32 +1,34 @@
 .participation-card {
-    text-align: center;
-    width: 360px;
-    height: 370px;
+  color: #0A376E;
+  text-align: center;
+  width: 360px;
+  height: 370px;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 16px;
+  box-shadow: -500px 20px 0px #ffffff6e inset;
+  h1, h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700 !important;
+    font-size: 25px;
+    line-height: 30px;
     display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex-direction: column;
-    align-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 16px;
-    box-shadow: -500px 20px 0px #ffffff6e inset;
-    h1, h2 {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 700 !important;
-      font-size: 25px;
-      line-height: 30px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-    }
-    h1 {
-      font-size: 20px;
-    }
-
-color: #0A376E;
+    text-align: center;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .sms-envoye {
+    background: #63ff6b !important;
+  }
   .session-terminee {
     width: 275px;
     height: 50px;
@@ -37,7 +39,7 @@ color: #0A376E;
     border-radius: 12px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     .text-terminee {
       font-family: 'Montserrat';
       font-style: normal;
@@ -49,6 +51,13 @@ color: #0A376E;
       text-align: center;
       color: #FFFFFF;
     }
+    .iconify {
+      margin-right: 10px;
+      margin-bottom: 5px;
+      font-size: 35px;
+      color: #0A376E;
+    }
+    
   }
   .show-session-btn {
     width: 275px;
@@ -60,7 +69,7 @@ color: #0A376E;
     border-radius: 12px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     .text-session {
       font-family: 'Montserrat';
       font-style: normal;
@@ -72,5 +81,17 @@ color: #0A376E;
       text-align: center;
       color: #001A30;
     }
+  }
+  .text-sms {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: inherit;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #0A376E;
+    margin-top: 5px;
   }
 }
