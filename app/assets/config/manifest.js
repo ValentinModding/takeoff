@@ -2,3 +2,4 @@
 //= link_directory ../stylesheets .css
 //= link manifest.json
 //= link application.css
+// = link manifest.json

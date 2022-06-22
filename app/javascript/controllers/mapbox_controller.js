@@ -1,7 +1,7 @@
 // app/javascript/controllers/mapbox_controller.js
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
+// import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
 
 export default class extends Controller {
   static values = {
