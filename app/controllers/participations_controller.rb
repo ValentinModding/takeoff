@@ -42,6 +42,7 @@ avec #{@activity.participations_count} buddies",
     )
   end
 
+
   def send_sms_back
     account_sid = ENV['TWILIO_ACCOUNT_SID']
     auth_token = ENV['TWILIO_AUTH_TOKEN']
