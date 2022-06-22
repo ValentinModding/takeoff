@@ -1,5 +1,5 @@
 meta_product_name: "Take Off"
 meta_title: "Take Off - Your surf buddy"
 meta_description: "take off l'app qui te fear decoller en surf tout en rassurant tes proches"
-meta_image: "favicon.ico" # should exist in `app/assets/images/`
+meta_image: "logo-surfapp1200.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
