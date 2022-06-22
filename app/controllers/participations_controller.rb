@@ -50,7 +50,7 @@ avec #{@activity.participations_count} buddies",
     @client = Twilio::REST::Client.new(account_sid, auth_token)
     message = @client.messages.create(
       body: "#{@participation.user.name} est bien rentrée de sa session",
-      from: '+19032824020',
+      from: '+12512577944',
       to: "+33#{@participation.contact.tel}}"
     )
 
@@ -63,7 +63,7 @@ avec #{@activity.participations_count} buddies",
     @client = Twilio::REST::Client.new(account_sid, auth_token)
     message = @client.messages.create(
       body: "#{@participation.contact.name} a bien été prévenu de ton retour de session",
-      from: '+19032824020',
+      from: '+12512577944',
       to: "+33#{@user.tel}}"
     )
   end
@@ -94,6 +94,8 @@ avec #{@activity.participations_count} buddies",
     @participation.status = true
     @user = current_user
     # @order.user = current_user
+    send_sms_back
+    sms_confirmation
     @participation.save!
     redirect_to dashboard_path
   end
