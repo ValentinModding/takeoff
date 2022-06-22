@@ -139,7 +139,6 @@ session1 = Activity.create!(
   spot: spot6
 )
 
-
 session2 = Activity.create!(
   id: 4,
   wave_height: 1,
