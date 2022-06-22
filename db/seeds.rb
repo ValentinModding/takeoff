@@ -94,38 +94,38 @@ spot10 = Spot.create!(
 
 puts "10 spots créés"
 
-puts "Creation des users ..."
+# puts "Creation des users ..."
 
-user1 = User.create!(
-  email: "michel@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
-  name: "Michel",
-  admin: false,
-  score: 0,
-  address: "12 rue st jacques",
-  age: 56
-)
-user2 = User.create!(
-  email: "toto@gmail.com",
-  password: "123456",
-  password_confirmation: "123456",
-  name: "Toto",
-  admin: true,
-  score: 5,
-  address: "5 rue de la liberté",
-  age: 22
-)
-puts "users crées avec succes"
+# user1 = User.create!(
+#   email: "michel@gmail.com",
+#   password: "123456",
+#   password_confirmation: "123456",
+#   name: "Michel",
+#   admin: false,
+#   score: 0,
+#   address: "12 rue st jacques",
+#   age: 56
+# )
+# user2 = User.create!(
+#   email: "toto@gmail.com",
+#   password: "123456",
+#   password_confirmation: "123456",
+#   name: "Toto",
+#   admin: true,
+#   score: 5,
+#   address: "5 rue de la liberté",
+#   age: 22
+# )
+# puts "users crées avec succes"
 
-puts "creation contact"
-contact1 = Contact.create!(
-  name: "Julien",
-  email: "julien@gmail.com",
-  tel: "603442620",
-  user: user1
-)
-puts "contacts crées avec succes"
+# puts "creation contact"
+# contact1 = Contact.create!(
+#   name: "Julien",
+#   email: "julien@gmail.com",
+#   tel: "603442620",
+#   user: user1
+# )
+# puts "contacts crées avec succes"
 
 puts "Création des sessions ..."
 
