@@ -98,8 +98,8 @@ puts "Creation des users ..."
 
 user1 = User.create!(
   email: "admin@gmail.com",
-  password: "admin",
-  password_confirmation: "admin",
+  password: "adminadmin",
+  password_confirmation: "adminadmin",
   name: "Admin",
   admin: true,
   score: 0,
