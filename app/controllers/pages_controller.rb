@@ -23,8 +23,8 @@ class PagesController < ApplicationController
     #   @my_contacts << contact
     # end
   end
-  
+
   def pres
-  end 
+  end
 
 end
