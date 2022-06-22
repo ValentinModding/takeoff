@@ -1,8 +1,8 @@
 require 'twilio-ruby'
 
 class ParticipationsController < ApplicationController
-  before_action :set_activity, only: [:new, :create, :show]
-  before_action :set_participation, only: [:destroy]
+  before_action :set_activity, only: [:new, :create, :show, :completed]
+  before_action :set_participation, only: [:destroy, :completed]
 
   def new
     @user = current_user
@@ -75,6 +75,12 @@ avec #{@activity.participations_count} buddies",
     # authorize @participation
   end
 
+  def completed
+    @participation.completed = !@participation.completed
+    @participation.save
+    redirect_to dashboard_path
+  end
+
   private
 
   def set_participation
@@ -86,6 +92,6 @@ avec #{@activity.participations_count} buddies",
   end
 
   def participation_params
-    params.require(:participation).permit(:start, :end, :user_id, :activity_id, :contact_id)
+    params.require(:participation).permit(:start, :end, :user_id, :activity_id, :contact_id, :completed)
   end
 end

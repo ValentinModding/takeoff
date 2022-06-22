@@ -1,50 +1,14 @@
-<%= link_to activity_path(participation.activity) do %>
-<div class="session-card">
-  <div class="session-image" style="background-image: url(<%= participation.activity.spot.photo.attached? ? cl_image_path(participation.activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
-    <div class="session-left">
-      <div class="categorie-session">
-        <span class="iconify" data-icon="arcticons:weather">soleil</span>
-        <h6><%= participation.activity.temp %>°</h6>
-      </div>
-      <div class="categorie-session">
-        <span class="iconify" data-icon="carbon:temperature-water">eau</span>
-        <h6><%= participation.activity.water_temp %>°</h6>
-      </div>
-      <div class="categorie-session">
-        <span class="iconify" data-icon="map:surfing">surfer</span>
-        <h6>+2</h6>
-      </div>
-      <div class="categorie-session">
-        <% waves_number = participation.activity.wave_height * 2 %>
-        <% waves_number.times do %>
-          <span class="iconify" data-icon="emojione-v1:water-wave">wave</span>
-        <% end %>
-      </div>
-    </div>
-    <div class="session-right">
-      <div class="session-favorites">
-        <span class="iconify" data-icon="bi:heart">heart</span>
-      </div>
-      <div class="session-flag">
-        <% flag_color = participation.activity.flag.downcase %>
-        <% if flag_color == "green" %>
-          <span class="iconify" data-icon="ooui:flag-rtl" style="color:#4CED52">flag</span>
-        <% elsif flag_color == "yellow" %>
-          <span class="iconify" data-icon="ooui:flag-rtl" style="color:#ffea00">flag</span>
-        <% else  %>
-          <span class="iconify" data-icon="ooui:flag-rtl" style="color:red">flag</span>
-        <% end %>
-      </div>
-    </div>
+<div class="participation-card" style="background-image: url(<%= participation.activity.spot.photo.attached? ? cl_image_path(participation.activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
+  <h1>Session du <%= participation.activity.date_time_start.strftime("%d/%m/%Y à %Hh %M")%></h1>
+  <h2>Préviens <%= participation.contact.name %> que ta session est terminée !</h2>
+  <div class="session-terminee">
+    <h3 class="text-terminee">session terminée !</h3>
   </div>
-  <div class="session-bottom">
-    <% months = ["Janvier", "Février", "Mars", "Avril", "Mai" , "Juin", "Juillet" , "Aout" , "Septembre", "Octobre", "Novembre", "Décembre"] %>
-    <p> <%= participation.activity.date_time_start.day %> &nbsp;</p>
-    <p> <%= months[participation.activity.date_time_start.month - 1] %> &nbsp;</p>
-    <span class="pink"> ● &nbsp;</span>
-    <p> <%=  %> <%= participation.activity.spot.name %> &nbsp;</p>
-    <span class="pink"> ● &nbsp;</span>
-    <p>14km</p>
+
+  <%= link_to activity_path(participation.activity) do%>
+  <div class="show-session-btn">
+    <h3 class="text-session">voir la session</h3>
   </div>
+  <% end %>
 </div>
-<% end %>
+<% console %>
