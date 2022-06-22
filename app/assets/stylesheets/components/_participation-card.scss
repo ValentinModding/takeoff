@@ -12,7 +12,8 @@
   align-items: center;
   justify-content: space-evenly;
   border-radius: 16px;
-  box-shadow: -500px 20px 0px #ffffff6e inset;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 0px 7px #0a376e38 inset;
   h1, h2 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -57,7 +58,7 @@
       font-size: 35px;
       color: #0A376E;
     }
-    
+
   }
   .show-session-btn {
     width: 275px;
