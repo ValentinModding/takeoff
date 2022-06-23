@@ -1,25 +1,27 @@
 <div class= "new-contact">
 
-
   <div class= "contact-background">
     <div class="contact-title" >
       <h1>Ajouter un nouveau contact d'urgence</h1>
     </div>
 
     <div class= "contact-form">
-
       <div class="contact-inputs">
-
         <%= simple_form_for([@contact]) do |f| %>
-          <%= f.input :name, :label => "Ajouter un nom :" %>
-          <%= f.input :tel, :label => "Ajouter un numéro de téléphone: +33" %>
+          <%= f.input :name, :label => "Nom et Prénom :" %>
+          <%= f.input :tel, :label => "Numéro de téléphone: +33" %>
           <%= f.button :submit, "Confirmer", class: "my-button" %>
         <% end %>
-
       <div>
 
+      <div class="btn-join-back">
+        <%= link_to 'Back', onclick: "window.history.back();", id: "icone-arrow" do %>
+        <h2 class="btn-small" >Retour</h2>
+      <% end %>
     </div>
 
   </div>
 
 </div>
+
+<%# <%= render 'shared/navbar' %> %>
