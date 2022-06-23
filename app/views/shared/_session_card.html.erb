@@ -2,26 +2,28 @@
 <div class="session-card" >
 <%= link_to activity_path(activity),  data: { favorites_target: "link" }, remote: true  do %>
   <div class="session-image" style="background-image: url(<%= activity.spot.photo.attached? ? cl_image_path(activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
-    <div class="session-left">
-      <div class="categorie-session">
-        <span class="iconify" data-icon="arcticons:weather">soleil</span>
-        <h6><%= activity.temp %>°</h6>
+    <%= link_to activity_path(activity) do %>
+      <div class="session-left">
+        <div class="categorie-session">
+          <span class="iconify" data-icon="arcticons:weather">soleil</span>
+          <h6><%= activity.temp %>°</h6>
+        </div>
+        <div class="categorie-session">
+          <span class="iconify" data-icon="carbon:temperature-water">eau</span>
+          <h6><%= activity.water_temp %>°</h6>
+        </div>
+        <div class="categorie-session">
+          <span class="iconify" data-icon="map:surfing">surfer</span>
+          <h6><%= activity.participations_count %></h6>
+        </div>
+        <div class="categorie-session">
+          <% waves_number = activity.wave_height * 2 %>
+          <% waves_number.times do %>
+            <span class="iconify" data-icon="carbon:wave-height">wave</span>
+          <% end %>
+        </div>
       </div>
-      <div class="categorie-session">
-        <span class="iconify" data-icon="carbon:temperature-water">eau</span>
-        <h6><%= activity.water_temp %>°</h6>
-      </div>
-      <div class="categorie-session">
-        <span class="iconify" data-icon="map:surfing">surfer</span>
-        <h6><%= activity.participations_count %></h6>
-      </div>
-      <div class="categorie-session">
-        <% waves_number = activity.wave_height * 2 %>
-        <% waves_number.times do %>
-          <span class="iconify" data-icon="carbon:wave-height">wave</span>
-        <% end %>
-      </div>
-    </div>
+    <% end %>
     <div class="session-right">
       <%= render 'shared/favoris', activity: activity %>
       <div class="session-flag">
