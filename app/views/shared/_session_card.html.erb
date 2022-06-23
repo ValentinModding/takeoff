@@ -1,5 +1,6 @@
-<%= link_to activity_path(activity) do %>
-<div class="session-card">
+<div class="controller-favorites" data-controller="favorites">
+<div class="session-card" >
+<%= link_to activity_path(activity),  data: { favorites_target: "link" }, remote: true  do %>
   <div class="session-image" style="background-image: url(<%= activity.spot.photo.attached? ? cl_image_path(activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
     <div class="session-left">
       <div class="categorie-session">
@@ -22,9 +23,7 @@
       </div>
     </div>
     <div class="session-right">
-      <div class="session-favorites">
-        <span class="iconify" data-icon="bi:heart">heart</span>
-      </div>
+      <%= render 'shared/favoris', activity: activity %>
       <div class="session-flag">
         <% flag_color = activity.flag.downcase %>
         <% if flag_color == "green" %>
@@ -46,3 +45,10 @@
   </div>
 </div>
 <% end %>
+</div>
+
+<style>
+.favoris {
+  z-index: 1000 !important;
+}
+</style>

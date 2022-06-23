@@ -19,6 +19,7 @@ class ActivitiesController < ApplicationController
 
   def index
     @activities = Activity.all
+    
     @user = current_user
     @markers = @activities.map do |activity|
       {
