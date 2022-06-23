@@ -25,7 +25,7 @@ class ActivitiesController < ApplicationController
         lat: activity.spot.latitude,
         lng: activity.spot.longitude,
         info_window: render_to_string(partial: "info_window", locals: { activity: activity }),
-        image_url: helpers.asset_url("TAKE OFF 2.png")
+        image_url: helpers.asset_url("logo-surfapp.png")
       }
     end
     if params[:query].present?
