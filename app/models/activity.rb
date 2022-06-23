@@ -1,6 +1,7 @@
 class Activity < ApplicationRecord
   belongs_to :spot
   has_many :participations, dependent: :destroy
+  has_many :favorites
 
   def participations_count
     @participations = self.participations.count

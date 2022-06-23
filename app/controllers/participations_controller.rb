@@ -47,28 +47,11 @@ avec #{@activity.participations_count} buddies",
 
 
   def send_sms_back
-    account_sid = ENV['TWILIO_ACCOUNT_SID']
-    auth_token = ENV['TWILIO_AUTH_TOKEN']
-
-    @client = Twilio::REST::Client.new(account_sid, auth_token)
-    message = @client.messages.create(
-      body: "#{@participation.user.name} est bien rentrée de sa session",
-      from: '+12512577944',
-      to: "+33#{@participation.contact.tel}}"
-    )
-
+    TwillioMessage.send_sms("#{@participation.user.name} est bien rentrée de sa session", "+33#{@participation.contact.tel}")
   end
 
   def sms_confirmation
-    account_sid = ENV['TWILIO_ACCOUNT_SID']
-    auth_token = ENV['TWILIO_AUTH_TOKEN']
-
-    @client = Twilio::REST::Client.new(account_sid, auth_token)
-    message = @client.messages.create(
-      body: "#{@participation.contact.name} a bien été prévenu de ton retour de session",
-      from: '+12512577944',
-      to: "+33#{@user.tel}}"
-    )
+    TwillioMessage.send_sms("#{@participation.contact.name} a bien été prévenu de ton retour de session", "+33#{@user.tel}")
   end
 
   def create
