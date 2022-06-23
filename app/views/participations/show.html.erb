@@ -4,7 +4,7 @@
     <div class="participation-content">
       <h1>Profite de ta session !</h1>
       <%= link_to video_path do %>
-        <h3><%= @participation.contact.name %> sera notifié <%= @activity.date_time_start.strftime("%d/%m/%Y à %Hh %M")%> quand tu partiras pour ta session. Il recevra une nouvelle notification si tu n'as pas validé ton retour.</h3>
+        <h3><%= @participation.contact.name %> a été notifié à <%= @activity.date_time_start.strftime("%d/%m/%Y à %Hh %M")%> de ton départ pour ta session! Il recevra une nouvelle notification si tu n'as pas validé ton retour.</h3>
       <% end %>
     </div>
   </div>
