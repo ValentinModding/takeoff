@@ -1,49 +1,28 @@
 <div class= show-spot >
 
-  <div class="banner">
-    <div class="container">
-      <h1>Le savais-tu ?</h1>
-      <h3>La Côte des Basques</h3>
-    </div>
+  <div class="banner" style="background-image: url(<%= @spot.photo.attached? ? cl_image_path(@spot.photo.key) : image_tag("surfer.jpg") %>)">
+    <h1>Le savais-tu ?</h1>
+    <h3><%= @spot.name %></h3>
   </div>
 
-
   <div class= "spot-details">
+    <div class="spot-content">
+      <h2>ADRESSE DU SPOT</h2>
+      <div class="spot-div">
+        <p><%= @spot.address %></p>
+      </div>
 
     <div class="spot-content">
       <h2>SPOT INFOS</h2>
       <div class="spot-div">
-        <p>La digue permet de rejoindre le peak facilement</p>
-      </div>
-
-      <div class="spot-div">
-        <p>Spot pour longboards</p>
-      </div>
-
-      <div class="spot-div">
-        <p>Danger à marée haute</p>
-      </div>
-
-      <div class="spot-div">
-        <p>Spot très fréquenté par les débutants, les longboards et les paddle </p>
-      </div>
-
-      <div class="spot-div">
-        <p>Conseil : bien connaître les règles de prorité</p>
-      </div>
-
-      <div class="spot-div">
-        <p>Le Roxy Pro s’est déroulé ici en 2015</p>
+        <p><%= @spot.description %></p>
       </div>
 
     </div>
-
     <div class="btn-join-back">
       <%= link_to 'Back', onclick: "window.history.back();", id: "icone-arrow" do %>
         <h2 class="btn-small" >Back</h2>
       <% end %>
     </div>
-
   </div>
-
 </div>

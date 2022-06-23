@@ -2,7 +2,7 @@ require 'twilio-ruby'
 
 class ParticipationsController < ApplicationController
   before_action :set_activity, only: [:new, :create, :show, :update]
-  before_action :set_participation, only: [:destroy, :update]
+  before_action :set_participation, only: [:destroy, :update, :show]
 
   def new
     @user = current_user
@@ -11,6 +11,9 @@ class ParticipationsController < ApplicationController
     @participation.end = @activity.date_time_end
     @contacts = Contact.where(user: current_user)
     # authorize @participation
+  end
+
+  def show
   end
 
   def send_sms_to_contact
