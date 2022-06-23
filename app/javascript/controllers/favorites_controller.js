@@ -4,7 +4,6 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "favoris", "link" ]
   connect() {
-    console.log("Hellow from favorites");
   }
 
   favorise() {

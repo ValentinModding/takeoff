@@ -9,7 +9,7 @@
 # suppression des spots user & contact
 
 puts "Rest de la BDD ..."
-
+Favorite.destroy_all
 Participation.destroy_all
 Activity.destroy_all
 Contact.destroy_all
@@ -126,10 +126,11 @@ user2 = User.create!(
 )
 puts "users crées avec succes"
 
+puts "Création du contact par défaut"
+
 puts "Création des sessions ..."
 
 session1 = Activity.create!(
-  id: 3,
   wave_height: 2,
   wind: 6,
   flag: "Yellow",
@@ -147,7 +148,6 @@ session1 = Activity.create!(
 )
 
 session2 = Activity.create!(
-  id: 4,
   wave_height: 1,
   wind: 18,
   flag: "Green",
@@ -165,7 +165,6 @@ session2 = Activity.create!(
 )
 
 session3 = Activity.create!(
-  id: 5,
   wave_height: 1,
   wind: 11,
   flag: "Yellow",
@@ -184,7 +183,6 @@ session3 = Activity.create!(
 )
 
 session4 = Activity.create!(
-  id: 6,
   wave_height: 1,
   wind: 9,
   flag: "Green",
@@ -203,7 +201,6 @@ session4 = Activity.create!(
 )
 
 session5 = Activity.create!(
-  id: 2,
   wave_height: 1,
   wind: 10,
   flag: "Green",

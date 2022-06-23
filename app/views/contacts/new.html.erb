@@ -7,8 +7,8 @@
     <div class= "contact-form">
       <div class="contact-inputs">
         <%= simple_form_for([@contact]) do |f| %>
-          <%= f.input :name, :label => "Nom et Prénom :" %>
-          <%= f.input :tel, :label => "Numéro de téléphone: +33" %>
+          <%= f.input :name, :label => "Nom et Prénom :", input_html: {value: "Julien"}%>
+          <%= f.input :tel, :label => "Numéro de téléphone: +33" , input_html: {value: "778317919"} %>
           <%= f.button :submit, "Confirmer", class: "my-button" %>
         <% end %>
       <div>
