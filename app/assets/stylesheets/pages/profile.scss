@@ -156,7 +156,6 @@
       text-align: center;
       font-family: 'Montserrat';
       justify-content: center;
-
       display: flex;
       color: white;
       font-weight: 700;
@@ -173,12 +172,15 @@
       .log-out {
         display: flex;
         justify-content: center;
-        font-family: 'Montserrat';
-        text-align: center;
-        color: white;
-        font-weight: 700;
-        font-size: 25px;
-        background-color: #FF6363;
-        border-radius: 8px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          .btn {
+          margin-top: 40px;
+          text-align: center;
+          font-family: 'Montserrat';
+          color: white;
+          font-weight: 700;
+          font-size: 25px;
+          background-color: #FF6363;
+          border-radius: 8px;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          }
       }
