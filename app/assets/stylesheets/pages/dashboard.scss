@@ -7,7 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-image: url(https://images.unsplash.com/photo-1608880619984-49d0ad6e70a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=402&q=80);
 
   #btn-logout {
     display: flex;
@@ -49,7 +49,7 @@
     border-radius: 8px;
   }
   .top {
-    background-color: $blue;
+    background: linear-gradient(176.75deg, #FF6363 -3.78%, #fed11cdd 97.32%);
     width: 100%;
     height: 140px;
     top: 0;
@@ -80,18 +80,25 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    .main-title {
+      background-color: white;
+      border-radius: 8px;
+      padding: 10px 20px;
+      width: 360px;
+      text-align: center;
+    }
     h3 {
       font-style: normal;
       font-weight: 700;
       font-size: 25px;
       line-height: 1;
       color: $blue;
+      margin: 20px;
       .highlight {
         padding: 5px 5px;
-        border: $pink 3px solid;
-        background-color: white;
         border-radius: 8px;
-        color: $blue;
+        color: $pink;
+        font-weight: 800;
       }
     }
   }
