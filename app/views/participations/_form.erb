@@ -4,7 +4,12 @@
       <%= f.input :start, as: :time, :label => "Heure de début :" %>
       <%= f.input :end, as: :time, :label => "Heure de fin :" %>
       <%= f.input :contact_id, :label => "Choisir mon contact d'urgence :", :collection => @contacts %>
-      <%= f.submit "Confirmer" %>
+      <div class="btns">
+        <%= f.submit "Confirmer" %>
+          <%= link_to 'Back', onclick: "window.history.back();", id: "icone-arrow" do %>
+            <h2 class="btn-small" >Back</h2>
+          <% end %>
+      </div>
     <% end %>
   </div>
 </div>
