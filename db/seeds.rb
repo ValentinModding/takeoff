@@ -118,7 +118,7 @@ user2 = User.create!(
   password: "mathilde",
   password_confirmation: "mathilde",
   name: "Mathilde",
-  admin: false,
+  admin: true,
   score: 5,
   address: "5 rue de la liberté",
   age: 22,
