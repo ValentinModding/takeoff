@@ -41,55 +41,62 @@ spot1 = Spot.create!(
 spot2 = Spot.create!(
   name: "Les Culs Nus",
   address: "62 Av. des Tamaris, 40150 Soorts-Hossegor",
-  description: "description spot 2"
+  description: "Plage nudiste emblematique où se déroule chaque année le Quiksilver Pro France !
+  Jérémy Flores y a été sacré Champion du Monde en 2019 ! Spot légendaire connu pour ses tubes très puissants,
+  le surf peut y être pratiqué par les débutants pendant l'été, où les vagues sont plus accessibles au large.
+  Privilégier les petites conditions et toujours bien connaître les règles de priorité car le spot est également fréquentés par les locaux et surfeurs professionnels."
 )
 
 spot3 = Spot.create!(
   name: "La Sud",
   address: "121 Boulevard de la Dune, 40150 Soorts-Hossegor, France",
-  description: "description spot 3"
+  description: "Plage fréquentée par les écoles de surf, vous pourrez surfer à côté entre buddies, en toute sécurité."
 )
 
 spot4 = Spot.create!(
   name: "Plage de la Piste",
   address: "10 Allée du Romarin, 40130 Capbreton, France",
-  description: "description spot 4"
+  description: "Spot atypique de Capbreton, vous y trouverez des blockhaus de la Seconde Guerre Mondiale sur la plage. Tout l'air d'un secret spot, avec peu de monde à l'eau, session de rêve assurée entre buddies !"
 )
 
 spot5 = Spot.create!(
   name: "Plage de la Chambre d'Amour",
   address: "5 Place des Docteurs Gentilhe, 64600 Anglet, France",
-  description: "description spot 5"
+  description: "Spot paradisiaque pour admirer l'un des plus beau coucher de soleil au moment de votre session.
+  Ce spot offre des conditions un peu plus solides qu'au sud du Pays Basque et sera destiné plutôt aux surfeurs intermédiaires."
 )
 
 spot6 = Spot.create!(
   name: "La Grande Plage",
   address: "1 Boulevard du Général de Gaulle, 64200 Biarritz, France",
-  description: "description spot 6"
+  description: "Spot situé au centre ville de Biarritz et fréquenté par les écoles de surf est accessible pour tout niveau mais peut être dangereux à marée basse en raison de ses roches. Les vagues sont plus puissantes et plus creuses qu'à la Cote des Basques. Un petit niveau est nécessaire si vous partez surfer seul(e). "
 )
 
 spot7 = Spot.create!(
   name: "La Cote des Basques",
   address: "Plage de la Côte des Basques, 64200 Biarritz, France",
-  description: "description spot 7"
+  description: "La digue permet de rejoindre le peak facilement, Ce spot est destiné à tous les niveau, les longboarders y passeront leurs meilleures sessions du sunrise au sunset.
+  Attention danger à marée haute, il sera difficile de sortir de l'eau.
+  C'est un spot très fréquenté par les débutants et les paddle, attention aux règles de priorités.
+  Fun fact : Le Roxy Pro s’est déroulé ici en 2015 !"
 )
 
 spot8 = Spot.create!(
   name: "Plage de l'Uhabia",
   address: "Plage de l'Uhabia, Rue de l'Uhabia, 64210 Bidart, France",
-  description: "description spot 8"
+  description: "Spot idéalement situé entre Saint-Jean-de-Luz et Biarritz, ce spot offre des conditions pour tous les niveaux."
 )
 
 spot9 = Spot.create!(
   name: "Plage de Cenitz",
   address: "257 Chemin de Cenitz, 64210 Guéthary, France",
-  description: "description spot 9"
+  description: "Pour tous les fans de longboard, Cenitz est un spot incontournable ! Néanmoins, le surf se pratique uniquement à marée haute en raison des rochers. Ce spot nécessite également de l'endurance, car rejoindre le spot demande de ramer quelques minutes, face aux vagues. "
 )
 
 spot10 = Spot.create!(
   name: "Plage d'Hendaye",
   address: "31 Boulevard de la Mer, 64700 Hendaye, France",
-  description: "description spot 10"
+  description: "A la frontière de l'Espagne, ce spot est dédié aux surfeurs débutants qui souhaitent s'amuser sans difficultés. Très fréquenté par les écoles de surf en été, il y aura du monde à l'eau, alors attention aux règles de priorité, pensez à la crème solaire et bon surf !"
 )
 
 puts "10 spots créés"
