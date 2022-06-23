@@ -18,12 +18,12 @@
         <p><%= @spot.description %></p>
       </div>
 
-    </div>
     <div class="btn-join-back">
-      <%= link_to, onclick: "window.history.back();", id: "icone-arrow" do %>
-        <h2 class="btn-small" >Retour</h2>
+      <%= link_to 'Retour', onclick: "window.history.back();", class: "btn-small" do %>
+        <h2>Retour</h2>
       <% end %>
     </div>
+    </div>
   </div>
-    <%= render 'shared/navbar' %>
 </div>
+    <%= render 'shared/navbar' %>

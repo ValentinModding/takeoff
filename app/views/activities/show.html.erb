@@ -86,8 +86,8 @@
     </div>
 
     <div class="btn-join-back">
-      <%= link_to, onclick: "window.history.back();", class: "btn-small" do %>
-        <h2 class="btn-small">Back</h2>
+      <%= link_to 'Retour', onclick: "window.history.back();", class: "btn-small" do %>
+        <h2>Retour</h2>
       <% end %>
       <%= link_to "Rejoindre", new_activity_participation_path(@activity), class: "btn-join" %>
     </div>
