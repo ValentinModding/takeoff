@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :spots, only: [:show]
 
+  resources :favorites, only: [:index]
   resources :activities do
     post "/toggle", to: "favorites#toggle_favorite"
     resources :participations, except: [:index]

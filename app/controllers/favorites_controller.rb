@@ -1,4 +1,8 @@
 class FavoritesController < ApplicationController
+  def index
+   @favorites = current_user.activities
+  end
+
   def toggle_favorite
     @activity = Activity.find(params[:activity_id])
     favoris = current_user.favorite_for(@activity)

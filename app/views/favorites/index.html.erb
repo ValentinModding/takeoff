@@ -1,0 +1,9 @@
+<div class="dashboard">
+  <div class="top">
+    <h1>Tes sessions <span class="highlight">favorites</span></h1>
+  </div>
+  <% @favorites.each do |favory| %>
+    <%= render 'shared/session_card', activity: favory %>
+  <% end %>
+</div>
+<%= render 'shared/navbar' %>
