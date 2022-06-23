@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
 
   get '/dashboard', to: 'pages#dashboard'
+  get '/video', to: 'pages#video'
 
   get '/profile', to: 'pages#profile'
 
