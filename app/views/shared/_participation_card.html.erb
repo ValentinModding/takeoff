@@ -1,6 +1,6 @@
 <div class="participation-card" style="background-image: url(<%= participation.activity.spot.photo.attached? ? cl_image_path(participation.activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
   <% if participation.status? %>
-    <h1>Session du <%= participation.activity.date_time_start.strftime("%d/%m/%Y à %Hh %M")%></h1>
+    <h1>Session du <%= participation.activity.date_time_start.strftime("%d/%m/%Y à %Hh%M")%></h1>
     <h2><%= participation.contact.name %> a bien été prévenu !</h2>
       <div class="session-terminee sms-envoye">
         <span class="iconify text-sms" data-icon="bi:check-lg"></span>
