@@ -3,7 +3,7 @@
 
   <div class= "contact-background">
     <div class="contact-title" >
-      <h1>Ajoute un nouveau contact d'urgence</h1>
+      <h1>Ajouter un nouveau contact d'urgence</h1>
     </div>
 
     <div class= "contact-form">
@@ -13,9 +13,7 @@
         <%= simple_form_for([@contact]) do |f| %>
           <%= f.input :name, :label => "Ajouter un nom :" %>
           <%= f.input :tel, :label => "Ajouter un numéro de téléphone: +33" %>
-          <div class="contact-actions">
-            <%= f.submit "Confirmer" %>
-          </div>
+          <%= f.button :submit, "Confirmer", class: "my-button" %>
         <% end %>
 
       <div>
