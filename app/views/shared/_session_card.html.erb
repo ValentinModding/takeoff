@@ -1,8 +1,8 @@
 <div class="controller-favorites" data-controller="favorites">
 <div class="session-card" >
-<%= link_to activity_path(activity),  data: { favorites_target: "link" }, remote: true  do %>
   <div class="session-image" style="background-image: url(<%= activity.spot.photo.attached? ? cl_image_path(activity.spot.photo.key) : asset_path("surfer.jpg") %>)">
-    <%= link_to activity_path(activity) do %>
+    <%= link_to activity_path(activity),  data: { favorites_target: "link" }, remote: true do %>
+      <%= link_to activity_path(activity) do %>
       <div class="session-left">
         <div class="categorie-session">
           <span class="iconify" data-icon="arcticons:weather">soleil</span>
@@ -23,6 +23,7 @@
           <% end %>
         </div>
       </div>
+      <% end %>
     <% end %>
     <div class="session-right">
       <%= render 'shared/favoris', activity: activity %>
@@ -46,7 +47,6 @@
     <p> <%=  %> <%= activity.spot.name %> &nbsp;</p>
   </div>
 </div>
-<% end %>
 </div>
 
 <style>
