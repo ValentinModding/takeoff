@@ -18,6 +18,7 @@
 
     .session-left {
       height: 100%;
+      width: 300px;
       display: flex;
       justify-content: space-evenly;
       flex-direction: column;
@@ -42,6 +43,9 @@
       align-items: flex-end;
       font-size: 28px;
       padding: 10px;
+      .iconify {
+        font-size: 40px;
+      }
     }
 
       .session-favorites {

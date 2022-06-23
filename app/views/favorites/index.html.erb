@@ -1,0 +1,14 @@
+<div class="dashboard">
+  <div class="top">
+    <h1>Tes sessions <span class="highlight">favorites</span></h1>
+  </div>
+
+  <% if @favorites.count == 0  %>
+    <h1 style="color:#0A376E">Pas encore de favoris</h1>
+  <% else %>
+    <% @favorites.each do |favory| %>
+      <%= render 'shared/session_card', activity: favory %>
+    <% end %>
+  <% end %>
+</div>
+<%= render 'shared/navbar' %>
