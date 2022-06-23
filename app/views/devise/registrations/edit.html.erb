@@ -17,21 +17,21 @@
         <%= f.input :email, required: true, autofocus: true %>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+          <p>En attente de confirmation de la part de: <%= resource.unconfirmed_email %></p>
         <% end %>
 
         <%= f.input :password,
                     hint: "Laissez blanc si vous ne souhaitez pas apporter de changement",
                     required: false,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "nouveau mot de passe" } %>
         <%= f.input :password_confirmation,
                     required: false,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "nouveau mot de passe" } %>
         <%= f.input :current_password,
                     hint: "Nous avons besoin de votre mot de passe actuel pour confirmer le changement",
                     required: true,
-                    input_html: { autocomplete: "current-password" } %>
-        <%= f.input :photo ,label: "Choose your main Image"%>
+                    input_html: { autocomplete: "mot de passe actuel" } %>
+        <%= f.input :photo ,label: "Choisir votre photo"%>
       </div>
 
 
@@ -39,8 +39,8 @@
         <%= f.button :submit, "Mettre à jour" %>
       </div>
       <% end %>
-      <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
+      <%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr?" }, method: :delete %></p>
       <%= link_to "Retour", :back %>
     </div>
 
