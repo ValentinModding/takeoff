@@ -1,14 +1,17 @@
 <div class="profile">
   <div class="background_edit">
-    <div class="user-name">
-      <%= @user.name %>
+    <div class="mon-profil">
+      <div class="mon-profil-header">
+      <h1> Mon profil </h1>
+      </div>
     </div>
 
     <div class="user-picture-name">
         <img class="avatar" alt="avatar" src="https://scontent.fcdg4-1.fna.fbcdn.net/v/t1.18169-9/14040100_1659643937684783_7350282897754591794_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=7cTzhCBNIawAX92hei6&_nc_ht=scontent.fcdg4-1.fna&oh=00_AT_5BqrcJLjzEpv8bUqwVxPD-ONbkQgEW-svVEwEbw2o4Q&oe=62D6A069" />
         <div class="name">
           <h2> <%= @user.name %> </h2>
-          <p> Tel. <%= @user.tel %> </p>
+          <p> 0<%= @user.tel %> </p>
+          <p> <%= @user.email %> </p>
           <div class="form-actions-1">
             <%= link_to "Modifier", edit_user_registration_path %>
           </div>
@@ -16,43 +19,53 @@
     </div>
 
     <div class="title-contact">
-    <h1> Mes contacts d'urgence </h1>
+      <div class="title-contact-header">
+      <h1> Mes contacts d'urgence </h1>
+      </div>
     </div>
 
-    <div class="contact">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <% @contacts.each_with_index do |contact, index| %>
-            <% if index == 0 %>
-              <div class="box-name carousel-item active">
-                <p> <%= contact.name %> <p>
-                <p> 0<%= contact.tel %> <p>
-              </div>
-            <% else %>
-              <div class="box-name carousel-item">
-                <p> <%= contact.name %> <p>
-              </div>
+    <div class="contact-1">
+      <div class="contact">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-indicators d-none">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <% @contacts.each_with_index do |contact, index| %>
+              <% if index == 0 %>
+                <div class="box-name carousel-item active">
+                  <p> <%= contact.name %> <p>
+                  <p>0<%= contact.tel %> <p>
+                </div>
+              <% else %>
+                <div class="box-name carousel-item">
+                  <p> <%= contact.name %> <p>
+                  <p>0<%= contact.tel %> <p>
+                </div>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="form-box">
+        <%= link_to new_contact_path do %>
+          <span class="iconify surf" data-icon="ant-design:plus-circle-outlined"></span>
+        <% end %>
+        </div>
       </div>
     </div>
-      <div class="form-box">
-      <%= link_to new_contact_path do %>
-        <span class="iconify surf" data-icon="ant-design:plus-circle-outlined"></span>
-      <% end %>
+    <div class="log-out">
+      <div class="btn">
+        <a id="btn-logout" rel="nofollow" data-method="delete" href="/users/sign_out">Déconnexion</a>
       </div>
+    </div>
 </div>
