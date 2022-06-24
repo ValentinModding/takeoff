@@ -7,7 +7,7 @@
         <h3 class="text-sms">SMS envoyé</h3>
       </div>
   <% else %>
-      <h1>Session du <%= participation.activity.date_time_start.strftime("%d/%m/%Y à %Hh %M")%></h1>
+      <h1>Session du <%= participation.start.strftime("%d/%m/%Y à %Hh %M")%></h1>
       <h2>Préviens <%= participation.contact.name %> que ta session est terminée !</h2>
     <%= link_to activity_participation_path(participation.activity, participation), method: :patch, remote: true do %>
       <div class="session-terminee">
