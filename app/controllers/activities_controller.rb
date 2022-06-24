@@ -18,8 +18,7 @@ class ActivitiesController < ApplicationController
   end
 
   def index
-    @activities = Activity.all
-    
+    @activities = Activity.all.order("date_time_start ASC")
     @user = current_user
     @markers = @activities.map do |activity|
       {
