@@ -12,6 +12,7 @@
 - Api Check for sessions
 - Chat
 - Clean the code 
+- Responsive Design
 
 
 **Developpers :**
