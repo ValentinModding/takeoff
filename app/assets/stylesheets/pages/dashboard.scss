@@ -1,5 +1,6 @@
 .dashboard {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -50,7 +51,7 @@
     border-radius: 8px;
   }
   .top {
-    background: linear-gradient(176.75deg, #FF6363 -3.78%, #fed11cdd 97.32%);
+    background: linear-gradient(176.75deg, #ff4444 -3.78%, #fed11ce5 97.32%);
     width: 100%;
     height: 140px;
     top: 0;
