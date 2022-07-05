@@ -16,10 +16,10 @@
       <h3>Nous avons créé <font color= "#FF1569"><strong><%= @activities.count %></strong></font> sessions</h3>
       <div class="card-sessions-container">
           <% @activities.each do |activity| %>
-            <%= render 'shared/session_card', activity: activity %>
+              <%= render 'shared/session_card', activity: activity %>
           <% end %>
       </div>
     </div>
-  </div> 
+  </div>
 </div>
 <%= render 'shared/navbar' %>

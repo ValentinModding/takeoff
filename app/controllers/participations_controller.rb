@@ -59,8 +59,8 @@ avec #{@activity.participations_count} buddies",
     @participation.activity = @activity
     @participation.user = current_user
     if @participation.save!
-      send_sms_to_contact
-      sms_rappel
+      # send_sms_to_contact
+      # sms_rappel
       redirect_to activity_participation_path(@activity, @participation)
     else
       :new
@@ -80,8 +80,13 @@ avec #{@activity.participations_count} buddies",
     @participation.status = true
     @user = current_user
     # @order.user = current_user
-    send_sms_back
-    sms_confirmation
+    # send_sms_back
+    # sms_confirmation
+    puts current_user
+    puts current_user.score
+    current_user.score += @participation.activity.min_score
+    puts current_user.score
+    current_user.save!
     @participation.save!
     redirect_to dashboard_path
   end

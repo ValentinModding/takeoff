@@ -178,6 +178,7 @@ session3 = Activity.create!(
   spot_id: 5,
   name: "18 Juin - Plage de la Chambre d'Amour",
   temp: 37,
+  min_score: 300,
   water_temp: 22,
   spot: spot5
 )
@@ -189,7 +190,7 @@ session4 = Activity.create!(
   period: 10,
   wind_direction: "NO",
   wave_direction: "NO",
-  min_score: 0,
+  min_score: 50,
   date_time_start: "Sun, 19 Jun 2022 09:25:00.000000000 UTC +00:00",
   date_time_end: "Sun, 19 Jun 2022 15:23:00.000000000 UTC +00:00",
   tips: "Spot idéal pour les débutants à la frontière de l'Espagne ! Afficher le spot pour en savoir plus.",
