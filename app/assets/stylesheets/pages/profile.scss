@@ -7,26 +7,26 @@
     width: 100%;
     height: 100%;
 
-    .mon-profil {
+    .mon-profil, .title-contact {
       display: flex;
       justify-content: center;
     }
-    .mon-profil-header {
-      margin-top: 40px;
-      text-align: center;
-      h1 {
-      color: white;
-      font-family: Montserrat;
-      font-size: 25px;
-      font-weight: 700;
-      letter-spacing: 0em;
+    .mon-profil-header, .title-contact-header {
       display: flex;
-      align-items: center;
-      align-content: center;
-      background: #FF1569;
-      border-radius: 4px;
-      padding: 0 2vmin;
-      padding: 7px;
+      justify-content: center;
+      margin-top: 40px;
+      h1 {
+        padding: 15px 28px;
+        color: white;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 0em;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        background: #FF1569;
+        border-radius: 8px;
       }
     }
 
@@ -70,29 +70,12 @@
     .name {
       margin-top: 20px;
       color: white;
-      font-family: Montserrat;
-      display:inline-block;margin-left:1em;
-    }
-
-    .title-contact {
-      display: flex;
-      justify-content: center;
-    }
-    .title-contact-header {
-      margin-top: 30px;
-      text-align: center;
-      h1 {
-      color: white;
-      font-family: Montserrat;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0em;
-      display: flex;
-      align-items: center;
-      align-content: center;
-      background: #FF1569;
-      border-radius: 4px;
-      padding: 7px;
+      font-weight: 600;
+      display:inline-block;
+      margin-left:1em;
+      h2 {
+        font-weight: 900;
+        font-size: 28px;
       }
     }
 
@@ -111,7 +94,7 @@
           text-align: center;
         }
       }
-    }
+
 
       .form-box {
         border-radius: 30px;
@@ -183,3 +166,4 @@
           box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
           }
       }
+}
