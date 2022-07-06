@@ -7,11 +7,11 @@
   <div class="incoming">
     <h3 class="main-title">Sessions à ce jour: <span class="highlight"><%= @my_future_participations.count %></span></h3>
   <% @my_future_participations.each do |participation| %>
-    <% if participation.status == false && participation.updated_at || Date.today - 12 %>
-      <%= render 'shared/participation_card', participation: participation %>
-    <% end %>
+    <%= render 'shared/participation_card', participation: participation %>
   <% end %>
   </div>
-  <h1><%= current_user.score %></h1>
+  <div class="score">
+    <h1>Score : <span id="score"><%= current_user.score %></span></h1>
+  </div>
   <%= render 'shared/navbar' %>
 </div>
