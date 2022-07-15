@@ -7,7 +7,7 @@
 
 **To Do**
 
-- Score system 
+- Finish score system
 - Front upgrade
 - Api Check for sessions
 - Chat
